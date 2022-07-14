@@ -1,31 +1,29 @@
 {{ define "main" }}
-<article>
+<article class="single-article">
 	<header>
-		{{ if .Params.Rssonly }}
-			{{ with .Site.Params.Rssonly }}
-				<div>
-					{{ . | safeHTML }}
-				</div>
-			{{ end }}
-		{{ end }}
-	
 		{{ partial "hero.html" . }}
 	
 		<h1>
 			{{ partial "title.html" . }}
 		</h1>
-	</header><!-- .single_header -->
+	</header>
 	
-	<div>
+	<main>
+		{{ if .Params.Rssonly }}{{ with .Site.Params.Rssonly }}
+			<div class="rssonly">
+				{{ . | safeHTML }}
+			</div>
+		{{ end }}{{ end }}
+	
 		{{ .Content }}
-	</div><!-- .single_content -->
-	
-	<aside>
+		
 		<h2>{{ T "contact" }}</h2>
 	
 		<p>{{ .Site.Params.Contact | safeHTML }}</p>
-	</aside><!-- .single_contact -->
+	</main>
 	
-	{{ partial "sidebar.html" . }}
+	<aside>
+		{{ partial "sidebar.html" . }}
+	</aside>
 </article>
 {{ end }}
