@@ -6,17 +6,15 @@
 	</head>
 	
 	<body class="{{ if .Params.Theme }}{{ .Params.Theme }}{{ else }}purple{{ end }}">
-		<a href="#main" class="skip">{{ T "skip_link" }}</a>
-		
-		<header>
+		<header class="site-header">
 			{{ partial "header.html" . }}
 		</header>
 		
-		<main id="main">
+		<main class="site-main" id="main">
 			{{ block "main" . }}{{ end }}
 		</main>
 
-		<footer>
+		<footer class="site-footer">
 			{{ partial "footer.html" . }}
 		</footer>
 		

@@ -9,3 +9,17 @@
 {{ with .Site.Params.legal }}
 	<p>{{ .  | safeHTML }}</p>
 {{ end }}
+
+<nav>
+	<div>
+		{{ range .Site.Menus.navigation }}
+			<p><a href="{{ .URL }}">{{ .Name }}</a></p>
+		{{ end }}
+	</div>
+
+	<div>
+		{{ range .Site.Menus.colophon }}
+			<p><a href="{{ .URL }}">{{ .Name }}</a></p>
+		{{ end }}
+	</div>
+</nav>

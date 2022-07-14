@@ -34,7 +34,7 @@
 
 @font-face {
 	font-family: "Piazzolla";
-	src: url("../fonts/Piazzolla.woff2") format("woff2-variations");
+	src: url("../fonts/Piazzolla-Regular.woff2") format("woff2-variations");
 	font-display: swap;
 	font-style: normal;
 	font-weight: 100 900;
@@ -61,212 +61,212 @@
 ***********/
 
 .tomato {
-	--color-main: hsl(0, 90%, 60%);
+	--color-theme: hsl(0, 90%, 60%);
+	--color-accent: hsl(350, 80%, 30%);
 	--color-contrast: hsl(0, 90%, 92%);
 	--color-background: hsl(0, 90%, 99%);
 	--color-text: hsl(0, 90%, 5%);
-	--color-accent: hsl(350, 80%, 30%);
+	--color-text-over: var(--color-text);
 	--color-shadow: hsla(350, 10%, 30%, 30%);
 	--color-mono: hsl(350, 10%, 35%);
-	--text-over-bg: var(--color-text);
 }
 
 .orange {
-	--color-main: hsl(20, 90%, 60%);
+	--color-theme: hsl(20, 90%, 60%);
+	--color-accent: hsl(0, 80%, 30%);
 	--color-contrast: hsl(20, 90%, 92%);
 	--color-background: hsl(20, 90%, 99%);
 	--color-text: hsl(20, 90%, 5%);
-	--color-accent: hsl(0, 80%, 30%);
+	--color-text-over: var(--color-text);
 	--color-shadow: hsla(0, 10%, 30%, 30%);
 	--color-mono: hsl(0, 10%, 35%);
-	--text-over-bg: var(--color-text);
 }
 
 .brown {
-	--color-main: hsl(30, 30%, 50%);
+	--color-theme: hsl(30, 30%, 50%);
+	--color-accent: hsl(20, 50%, 25%);
 	--color-contrast: hsl(30, 50%, 92%);
 	--color-background: hsl(30, 90%, 99%);
 	--color-text: hsl(30, 90%, 5%);
-	--color-accent: hsl(20, 50%, 25%);
+	--color-text-over: var(--color-text);
 	--color-shadow: hsla(20, 10%, 25%, 30%);
 	--color-mono: hsl(20, 10%, 30%);
-	--text-over-bg: var(--color-text);
 }
 
 .yellow {
-	--color-main: hsl(40, 100%, 60%);
+	--color-theme: hsl(40, 100%, 60%);
+	--color-accent: hsl(30, 60%, 30%);
 	--color-contrast: hsl(40, 100%, 92%);
 	--color-background: hsl(40, 100%, 99%);
 	--color-text: hsl(40, 100%, 5%);
-	--color-accent: hsl(30, 60%, 30%);
+	--color-text-over: var(--color-text);
 	--color-shadow: hsla(30, 10%, 30%, 30%);
 	--color-mono: hsl(30, 10%, 35%);
-	--text-over-bg: var(--color-text);
 }
 
 .lime {
-	--color-main: hsl(70, 75%, 60%);
+	--color-theme: hsl(70, 75%, 60%);
+	--color-accent: hsl(100, 20%, 30%);
 	--color-contrast: hsl(70, 75%, 92%);
 	--color-background: hsl(70, 100%, 99%);
 	--color-text: hsl(70, 100%, 5%);
-	--color-accent: hsl(100, 20%, 30%);
+	--color-text-over: var(--color-text);
 	--color-shadow: hsla(100, 10%, 30%, 30%);
 	--color-mono: hsl(100, 10%, 35%);
-	--text-over-bg: var(--color-text);
 }
 
 .green {
-	--color-main: hsl(100, 50%, 60%);
+	--color-theme: hsl(100, 50%, 60%);
+	--color-accent: hsl(130, 40%, 25%);
 	--color-contrast: hsl(100, 50%, 92%);
 	--color-background: hsl(100, 100%, 99%);
 	--color-text: hsl(100, 100%, 5%);
-	--color-accent: hsl(130, 40%, 25%);
+	--color-text-over: var(--color-text);
 	--color-shadow: hsla(130, 10%, 25%, 30%);
 	--color-mono: hsl(130, 10%, 30%);
-	--text-over-bg: var(--color-text);
 }
 
 .sage {
-	--color-main: hsl(130, 20%, 60%);
+	--color-theme: hsl(130, 20%, 60%);
+	--color-accent: hsl(160, 40%, 25%);
 	--color-contrast: hsl(130, 20%, 92%);
 	--color-background: hsl(130, 100%, 99%);
 	--color-text: hsl(130, 100%, 5%);
-	--color-accent: hsl(160, 40%, 25%);
+	--color-text-over: var(--color-text);
 	--color-shadow: hsla(160, 10%, 25%, 30%);
 	--color-mono: hsl(160, 10%, 30%);
-	--text-over-bg: var(--color-text);
 }
 
 .turquoise {
-	--color-main: hsl(160, 60%, 45%);
+	--color-theme: hsl(160, 60%, 45%);
+	--color-accent: hsl(130, 50%, 25%);
 	--color-contrast: hsl(160, 60%, 92%);
 	--color-background: hsl(160, 100%, 99%);
 	--color-text: hsl(160, 100%, 5%);
-	--color-accent: hsl(130, 50%, 25%);
+	--color-text-over: var(--color-text);
 	--color-shadow: hsla(130, 10%, 25%, 30%);
 	--color-mono: hsl(130, 10%, 30%);
-	--text-over-bg: var(--color-text);
 }
 
 .cyan {
-	--color-main: hsl(190, 50%, 60%);
+	--color-theme: hsl(190, 50%, 60%);
+	--color-accent: hsl(210, 30%, 25%);
 	--color-contrast: hsl(190, 50%, 92%);
 	--color-background: hsl(190, 100%, 99%);
 	--color-text: hsl(190, 100%, 5%);
-	--color-accent: hsl(210, 30%, 25%);
+	--color-text-over: var(--color-text);
 	--color-shadow: hsla(210, 10%, 25%, 30%);
 	--color-mono: hsl(210, 10%, 30%);
-	--text-over-bg: var(--color-text);
 }
 
 .blue {
-	--color-main: hsl(210, 75%, 70%);
+	--color-theme: hsl(210, 75%, 70%);
+	--color-accent: hsl(230, 30%, 25%);
 	--color-contrast: hsl(210, 75%, 92%);
 	--color-background: hsl(210, 100%, 99%);
 	--color-text: hsl(210, 100%, 5%);
-	--color-accent: hsl(230, 30%, 25%);
+	--color-text-over: var(--color-text);
 	--color-shadow: hsla(230, 10%, 25%, 30%);
 	--color-mono: hsl(230, 10%, 30%);
-	--text-over-bg: var(--color-text);
 }
 
 .indigo {
-	--color-main: hsl(230, 50%, 40%);
+	--color-theme: hsl(230, 50%, 40%);
+	--color-accent: hsl(230, 60%, 25%);
 	--color-contrast: hsl(230, 50%, 92%);
 	--color-background: hsl(230, 100%, 99%);
 	--color-text: hsl(230, 100%, 5%);
-	--color-accent: hsl(230, 60%, 25%);
+	--color-text-over: var(--color-background);
 	--color-shadow: hsla(230, 40%, 25%, 30%);
 	--color-mono: hsl(230, 10%, 30%);
-	--text-over-bg: var(--color-background);
 }
 
 .violet {
-	--color-main: hsl(260, 55%, 75%);
+	--color-theme: hsl(260, 55%, 75%);
+	--color-accent: hsl(280, 30%, 25%);
 	--color-contrast: hsl(260, 55%, 92%);
 	--color-background: hsl(260, 100%, 99%);
 	--color-text: hsl(260, 100%, 5%);
-	--color-accent: hsl(280, 30%, 25%);
+	--color-text-over: var(--color-text);
 	--color-shadow: hsla(280, 10%, 25%, 30%);
 	--color-mono: hsl(280, 10%, 30%);
-	--text-over-bg: var(--color-text);
 }
 
 .purple {
-	--color-main: hsl(280, 55%, 30%);
+	--color-theme: hsl(280, 55%, 30%);
+	--color-accent: hsl(260, 30%, 25%);
 	--color-contrast: hsl(280, 55%, 92%);
 	--color-background: hsl(280, 100%, 99%);
 	--color-text: hsl(280, 100%, 5%);
-	--color-accent: hsl(260, 30%, 25%);
+	--color-text-over: var(--color-background);
 	--color-shadow: hsla(260, 10%, 0%, 30%);
 	--color-mono: hsl(260, 10%, 30%);
-	--text-over-bg: var(--color-background);
 }
 
 .lilac {
-	--color-main: hsl(300, 55%, 30%);
+	--color-theme: hsl(300, 55%, 30%);
+	--color-accent: hsl(325, 30%, 25%);
 	--color-contrast: hsl(300, 55%, 92%);
 	--color-background: hsl(300, 100%, 99%);
 	--color-text: hsl(300, 100%, 5%);
-	--color-accent: hsl(325, 30%, 25%);
+	--color-text-over: var(--color-background);
 	--color-shadow: hsla(325, 10%, 25%, 30%);
 	--color-mono: hsl(325, 10%, 30%);
-	--text-over-bg: var(--color-background);
 }
 
 .magenta {
-	--color-main: hsl(325, 60%, 35%);
+	--color-theme: hsl(325, 60%, 35%);
+	--color-accent: hsl(345, 50%, 25%);
 	--color-contrast: hsl(325, 60%, 92%);
 	--color-background: hsl(325, 100%, 99%);
 	--color-text: hsl(325, 100%, 5%);
-	--color-accent: hsl(345, 50%, 25%);
+	--color-text-over: var(--color-background);
 	--color-shadow: hsla(345, 10%, 25%, 30%);
 	--color-mono: hsl(345, 10%, 30%);
-	--text-over-bg: var(--color-background);
 }
 
 .red {
-	--color-main: hsl(345, 90%, 35%);
+	--color-theme: hsl(345, 90%, 35%);
+	--color-accent: hsl(0, 60%, 30%);
 	--color-contrast: hsl(340, 90%, 92%);
 	--color-background: hsl(345, 100%, 99%);
 	--color-text: hsl(345, 100%, 5%);
-	--color-accent: hsl(0, 60%, 30%);
+	--color-text-over: var(--color-background);
 	--color-shadow: hsla(0, 10%, 30%, 30%);
 	--color-mono: hsl(0, 10%, 35%);
-	--text-over-bg: var(--color-background);
 }
 
 .grey {
-	--color-main: hsl(230, 5%, 65%);
+	--color-theme: hsl(230, 5%, 65%);
+	--color-accent: hsl(210, 30%, 25%);
 	--color-contrast: hsl(230, 5%, 92%);
 	--color-background: hsl(230, 100%, 99%);
 	--color-text: hsl(230, 100%, 5%);
-	--color-accent: hsl(210, 30%, 25%);
+	--color-text-over: var(--color-text);
 	--color-shadow: hsla(210, 10%, 25%, 30%);
 	--color-mono: hsl(210, 10%, 30%);
-	--text-over-bg: var(--color-text);
 }
 
 .taupe {
-	--color-main: hsl(280, 5%, 50%);
+	--color-theme: hsl(280, 5%, 50%);
+	--color-accent: hsl(260, 30%, 20%);
 	--color-contrast: hsl(280, 5%, 92%);
 	--color-background: hsl(280, 100%, 99%);
 	--color-text: hsl(280, 100%, 5%);
-	--color-accent: hsl(260, 30%, 20%);
+	--color-text-over: var(--color-text);
 	--color-shadow: hsla(260, 10%, 20%, 30%);
 	--color-mono: hsl(260, 10%, 25%);
-	--text-over-bg: var(--color-text);
 }
 
 .black {
-	--color-main: hsl(280, 0%, 20%);
+	--color-theme: hsl(280, 0%, 20%);
+	--color-accent: hsl(260, 0%, 5%);
 	--color-contrast: hsl(280, 0%, 92%);
 	--color-background: hsl(280, 0%, 99%);
 	--color-text: hsl(280, 0%, 5%);
-	--color-accent: hsl(260, 0%, 5%);
+	--color-text-over: var(--color-background);
 	--color-shadow: hsla(260, 0%, 5%, 30%);
 	--color-mono: hsl(260, 0%, 10%);
-	--text-over-bg: var(--color-background);
 }
 
 ::selection {
@@ -276,212 +276,212 @@
 
 @media (prefers-color-scheme: dark) {
 	.tomato {
-		--color-main: hsl(0, 10%, 30%);
+		--color-theme: hsl(0, 10%, 30%);
+		--color-accent: hsl(350, 50%, 75%);
 		--color-contrast: hsl(0, 90%, 92%);
 		--color-background: hsl(0, 5%, 10%);
 		--color-text: hsl(0, 10%, 80%);
-		--color-accent: hsl(350, 50%, 75%);
+		--color-text-over: hsl(0, 10%, 95%);
 		--color-shadow: hsla(350, 10%, 30%, 30%);
 		--color-mono: hsl(350, 10%, 70%);
-		--text-over-bg: hsl(0, 10%, 95%);
 	}
 
 	.orange {
-		--color-main: hsl(20, 10%, 30%);
+		--color-theme: hsl(20, 10%, 30%);
+		--color-accent: hsl(0, 50%, 75%);
 		--color-contrast: hsl(20, 90%, 92%);
 		--color-background: hsl(20, 5%, 10%);
 		--color-text: hsl(20, 10%, 80%);
-		--color-accent: hsl(0, 50%, 75%);
+		--color-text-over: hsl(20, 10%, 95%);
 		--color-shadow: hsla(0, 10%, 30%, 30%);
 		--color-mono: hsl(0, 10%, 70%);
-		--text-over-bg: hsl(20, 10%, 95%);
 	}
 
 	.brown {
-		--color-main: hsl(30, 10%, 30%);
+		--color-theme: hsl(30, 10%, 30%);
+		--color-accent: hsl(20, 50%, 75%);
 		--color-contrast: hsl(30, 50%, 92%);
 		--color-background: hsl(30, 5%, 10%);
 		--color-text: hsl(30, 10%, 80%);
-		--color-accent: hsl(20, 50%, 75%);
+		--color-text-over: hsl(30, 10%, 95%);
 		--color-shadow: hsla(20, 10%, 25%, 30%);
 		--color-mono: hsl(20, 10%, 70%);
-		--text-over-bg: hsl(30, 10%, 95%);
 	}
 
 	.yellow {
-		--color-main: hsl(40, 10%, 30%);
+		--color-theme: hsl(40, 10%, 30%);
+		--color-accent: hsl(30, 50%, 75%);
 		--color-contrast: hsl(40, 100%, 92%);
 		--color-background: hsl(40, 5%, 10%);
 		--color-text: hsl(40, 10%, 80%);
-		--color-accent: hsl(30, 50%, 75%);
+		--color-text-over: hsl(40, 10%, 95%);
 		--color-shadow: hsla(30, 10%, 30%, 30%);
 		--color-mono: hsl(30, 10%, 70%);
-		--text-over-bg: hsl(40, 10%, 95%);
 	}
 
 	.lime {
-		--color-main: hsl(70, 10%, 30%);
+		--color-theme: hsl(70, 10%, 30%);
+		--color-accent: hsl(40, 50%, 75%);
 		--color-contrast: hsl(70, 75%, 92%);
 		--color-background: hsl(70, 5%, 10%);
 		--color-text: hsl(70, 10%, 80%);
-		--color-accent: hsl(40, 50%, 75%);
+		--color-text-over: hsl(70, 10%, 95%);
 		--color-shadow: hsla(40, 10%, 30%, 30%);
 		--color-mono: hsl(40, 10%, 70%);
-		--text-over-bg: hsl(70, 10%, 95%);
 	}
 
 	.green {
-		--color-main: hsl(100, 10%, 30%);
+		--color-theme: hsl(100, 10%, 30%);
+		--color-accent: hsl(70, 50%, 75%);
 		--color-contrast: hsl(100, 50%, 92%);
 		--color-background: hsl(100, 5%, 10%);
 		--color-text: hsl(100, 10%, 80%);
-		--color-accent: hsl(70, 50%, 75%);
+		--color-text-over: hsl(100, 10%, 95%);
 		--color-shadow: hsla(70, 10%, 25%, 30%);
 		--color-mono: hsl(70, 10%, 70%);
-		--text-over-bg: hsl(100, 10%, 95%);
 	}
 
 	.sage {
-		--color-main: hsl(130, 10%, 30%);
+		--color-theme: hsl(130, 10%, 30%);
+		--color-accent: hsl(100, 50%, 75%);
 		--color-contrast: hsl(130, 20%, 92%);
 		--color-background: hsl(130, 5%, 10%);
 		--color-text: hsl(130, 10%, 80%);
-		--color-accent: hsl(100, 50%, 75%);
+		--color-text-over: hsl(130, 10%, 95%);
 		--color-shadow: hsla(100, 10%, 25%, 30%);
 		--color-mono: hsl(100, 10%, 70%);
-		--text-over-bg: hsl(130, 10%, 95%);
 	}
 
 	.turquoise {
-		--color-main: hsl(160, 10%, 30%);
+		--color-theme: hsl(160, 10%, 30%);
+		--color-accent: hsl(130, 50%, 75%);
 		--color-contrast: hsl(160, 60%, 92%);
 		--color-background: hsl(160, 5%, 10%);
 		--color-text: hsl(160, 10%, 80%);
-		--color-accent: hsl(130, 50%, 75%);
+		--color-text-over: hsl(160, 10%, 95%);
 		--color-shadow: hsla(130, 10%, 25%, 30%);
 		--color-mono: hsl(130, 10%, 70%);
-		--text-over-bg: hsl(160, 10%, 95%);
 	}
 
 	.cyan {
-		--color-main: hsl(190, 10%, 30%);
+		--color-theme: hsl(190, 10%, 30%);
+		--color-accent: hsl(160, 50%, 75%);
 		--color-contrast: hsl(190, 50%, 92%);
 		--color-background: hsl(190, 5%, 10%);
 		--color-text: hsl(190, 10%, 80%);
-		--color-accent: hsl(160, 50%, 75%);
+		--color-text-over: hsl(190, 10%, 95%);
 		--color-shadow: hsla(160, 10%, 25%, 30%);
 		--color-mono: hsl(160, 10%, 70%);
-		--text-over-bg: hsl(190, 10%, 95%);
 	}
 
 	.blue {
-		--color-main: hsl(210, 10%, 30%);
+		--color-theme: hsl(210, 10%, 30%);
+		--color-accent: hsl(190, 50%, 75%);
 		--color-contrast: hsl(210, 75%, 92%);
 		--color-background: hsl(210, 5%, 10%);
 		--color-text: hsl(210, 10%, 80%);
-		--color-accent: hsl(190, 50%, 75%);
+		--color-text-over: hsl(210, 10%, 95%);
 		--color-shadow: hsla(190, 10%, 25%, 30%);
 		--color-mono: hsl(190, 10%, 70%);
-		--text-over-bg: hsl(210, 10%, 95%);
 	}
 
 	.indigo {
-		--color-main: hsl(230, 10%, 30%);
+		--color-theme: hsl(230, 10%, 30%);
+		--color-accent: hsl(210, 50%, 75%);
 		--color-contrast: hsl(230, 50%, 92%);
 		--color-background: hsl(230, 5%, 10%);
 		--color-text: hsl(230, 10%, 80%);
-		--color-accent: hsl(210, 50%, 75%);
+		--color-text-over: hsl(230, 10%, 95%);
 		--color-shadow: hsla(210, 10%, 25%, 30%);
 		--color-mono: hsl(210, 10%, 70%);
-		--text-over-bg: hsl(230, 10%, 95%);
 	}
 
 	.violet {
-		--color-main: hsl(260, 10%, 30%);
+		--color-theme: hsl(260, 10%, 30%);
+		--color-accent: hsl(230, 50%, 75%);
 		--color-contrast: hsl(260, 55%, 92%);
 		--color-background: hsl(260, 5%, 10%);
 		--color-text: hsl(260, 10%, 80%);
-		--color-accent: hsl(230, 50%, 75%);
+		--color-text-over: hsl(260, 10%, 95%);
 		--color-shadow: hsla(230, 10%, 25%, 30%);
 		--color-mono: hsl(230, 10%, 70%);
-		--text-over-bg: hsl(260, 10%, 95%);
 	}
 
 	.purple {
-		--color-main: hsl(280, 10%, 30%);
+		--color-theme: hsl(280, 10%, 30%);
+		--color-accent: hsl(260, 50%, 75%);
 		--color-contrast: hsl(280, 55%, 92%);
 		--color-background: hsl(280, 5%, 10%);
 		--color-text: hsl(280, 10%, 80%);
-		--color-accent: hsl(260, 50%, 75%);
+		--color-text-over: hsl(280, 10%, 95%);
 		--color-shadow: hsla(260, 10%, 25%, 30%);
 		--color-mono: hsl(260, 10%, 70%);
-		--text-over-bg: hsl(280, 10%, 95%);
 	}
 
 	.lilac {
-		--color-main: hsl(300, 10%, 30%);
+		--color-theme: hsl(300, 10%, 30%);
+		--color-accent: hsl(280, 50%, 75%);
 		--color-contrast: hsl(300, 55%, 92%);
 		--color-background: hsl(300, 5%, 10%);
 		--color-text: hsl(300, 10%, 80%);
-		--color-accent: hsl(280, 50%, 75%);
+		--color-text-over: hsl(300, 10%, 95%);
 		--color-shadow: hsla(280, 10%, 25%, 30%);
 		--color-mono: hsl(280, 10%, 70%);
-		--text-over-bg: hsl(300, 10%, 95%);
 	}
 
 	.magenta {
-		--color-main: hsl(325, 10%, 30%);
+		--color-theme: hsl(325, 10%, 30%);
+		--color-accent: hsl(300, 50%, 75%);
 		--color-contrast: hsl(325, 60%, 92%);
 		--color-background: hsl(325, 5%, 10%);
 		--color-text: hsl(325, 10%, 80%);
-		--color-accent: hsl(300, 50%, 75%);
+		--color-text-over: hsl(325, 10%, 95%);
 		--color-shadow: hsla(300, 10%, 25%, 30%);
 		--color-mono: hsl(300, 10%, 70%);
-		--text-over-bg: hsl(325, 10%, 95%);
 	}
 
 	.red {
-		--color-main: hsl(345, 10%, 30%);
+		--color-theme: hsl(345, 10%, 30%);
+		--color-accent: hsl(325, 50%, 75%);
 		--color-contrast: hsl(340, 90%, 92%);
 		--color-background: hsl(345, 5%, 10%);
 		--color-text: hsl(345, 10%, 80%);
-		--color-accent: hsl(325, 50%, 75%);
+		--color-text-over: hsl(345, 10%, 95%);
 		--color-shadow: hsla(325, 10%, 30%, 30%);
 		--color-mono: hsl(325, 10%, 70%);
-		--text-over-bg: hsl(345, 10%, 95%);
 	}
 
 	.grey {
-		--color-main: hsl(250, 5%, 30%);
+		--color-theme: hsl(250, 5%, 30%);
+		--color-accent: hsl(230, 50%, 75%);
 		--color-contrast: hsl(250, 5%, 92%);
 		--color-background: hsl(250, 5%, 10%);
 		--color-text: hsl(250, 10%, 80%);
-		--color-accent: hsl(230, 50%, 75%);
+		--color-text-over: hsl(250, 10%, 95%);
 		--color-shadow: hsla(230, 10%, 25%, 30%);
 		--color-mono: hsl(230, 10%, 70%);
-		--text-over-bg: hsl(250, 10%, 95%);
 	}
 
 	.taupe {
-		--color-main: hsl(280, 5%, 30%);
+		--color-theme: hsl(280, 5%, 30%);
+		--color-accent: hsl(260, 50%, 75%);
 		--color-contrast: hsl(280, 5%, 92%);
 		--color-background: hsl(280, 5%, 10%);
 		--color-text: hsl(280, 10%, 80%);
-		--color-accent: hsl(260, 50%, 75%);
+		--color-text-over: hsl(280, 10%, 95%);
 		--color-shadow: hsla(260, 10%, 20%, 30%);
 		--color-mono: hsl(260, 10%, 70%);
-		--text-over-bg: hsl(280, 10%, 95%);
 	}
 
 	.black {
-		--color-main: hsl(280, 0%, 30%);
+		--color-theme: hsl(280, 0%, 30%);
+		--color-accent: hsl(260, 0%, 75%);
 		--color-contrast: hsl(280, 0%, 92%);
 		--color-background: hsl(280, 0%, 10%);
 		--color-text: hsl(280, 0%, 80%);
-		--color-accent: hsl(260, 0%, 75%);
+		--color-text-over: hsl(280, 0%, 95%);
 		--color-shadow: hsla(260, 0%, 5%, 30%);
 		--color-mono: hsl(260, 0%, 70%);
-		--text-over-bg: hsl(280, 0%, 95%);
 	}
 	
 	::selection {
@@ -520,33 +520,6 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
-.skip {
-	clip: rect(1px, 1px, 1px, 1px);
-	position: absolute !important;
-	height: 1px;
-	width: 1px;
-	overflow: hidden;
- }
-
-.skip:focus {
-	background: black;
-	color: var(--color-background);
-	clip: auto !important;
-	display: block;
-	top: 1em;
-	left: 1em;
-	height: auto;
-	width: auto;
-	padding: 1em;
-	z-index: 100000;
-}
-
-@media (prefers-color-scheme: dark) {
-	.skip:focus {
-		color: var(--color-text);
-	}
-}
-
 html {
 	background-color: var(--color-background);
 	font-size: 100%;
@@ -555,6 +528,10 @@ html {
 body {
 	background-color: var(--color-background);
 	color: var(--color-text);
+	display: grid;
+		grid-template-columns: [header] max-content [sidebar] 1fr [article] 1fr [footer] max-content [end];
+		grid-template-rows: [header] 25vh [content] auto [footer] 1fr [end];
+		row-gap: 5rem;
 	font-family: var(--font-serif);
 	font-size: clamp(1.2rem, 3vw, 1.3rem);
 	-webkit-hyphens: auto;
@@ -568,7 +545,8 @@ body {
 		-ms-hyphenate-limit-zone: 6%;
 		-ms-hyphenate-limit-last: always;
 	line-height: 1.5;
-	margin: 1em auto;
+	margin: 0 auto;
+		max-width: 100ch;
 	padding: 0 0 0 0;
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-size-adjust: 100%;
@@ -576,15 +554,13 @@ body {
 
 a {
 	color: inherit;
-	text-decoration: underline;
-		text-decoration-color: var(--color-accent);
-		text-decoration-style: dotted;
+	text-decoration: none;
 }
 
 a:focus,
 a:hover {
 	background: var(--color-accent);
-	color: var(--color-background);
+	color: var(--color-text-over);
 }
 
 button {
@@ -649,4 +625,50 @@ ul {
 
 ul + p {
 	margin: 1em 0 1em 0 !important;
+}
+
+/************
+*************
+* Structure *
+*************
+************/
+
+.site-header {
+	background: var(--color-theme);
+	color: var(--color-text-over);
+	display: flex;
+		align-items: end;
+		justify-items: center;
+	grid-column: header;
+	grid-row: header;
+}
+
+.site-header a {
+	display: flex;
+		align-items: end;
+		justify-items: center;
+	height: 100%;
+}
+
+.site-header:has(a:hover) {
+	background: var(--color-accent);
+}
+
+.site-header h1 {
+	padding: 0 1rem 1rem 1rem;
+}
+
+.site-main {
+	grid-column: header/end;
+	grid-row: content;
+}
+
+.site-footer {
+	background: var(--color-theme);
+	color: var(--color-text-over);
+	display: flex;
+		justify-items: center;
+	grid-column: footer;
+	grid-row: footer;
+	padding: 1rem 1rem 1rem 1rem;
 }

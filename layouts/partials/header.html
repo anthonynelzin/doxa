@@ -1,17 +1,1 @@
-<div>
-	<a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
-</div>
-
-<nav>
-	<div>
-		{{ range .Site.Menus.navigation }}
-			<p><a href="{{ .URL }}">{{ .Name }}</a></p>
-		{{ end }}
-	</div>
-
-	<div>
-		{{ range .Site.Menus.colophon }}
-			<p><a href="{{ .URL }}">{{ .Name }}</a></p>
-		{{ end }}
-	</div>
-</nav>
+{{ if not .IsHome }}<a href="{{ .Site.BaseURL }}">{{ end }}<h1>{{ .Site.Title }}</h1>{{ if not .IsHome }}</a>{{ end }}
