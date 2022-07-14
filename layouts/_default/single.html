@@ -1,0 +1,31 @@
+{{ define "main" }}
+<article>
+	<header>
+		{{ if .Params.Rssonly }}
+			{{ with .Site.Params.Rssonly }}
+				<div>
+					{{ . | safeHTML }}
+				</div>
+			{{ end }}
+		{{ end }}
+	
+		{{ partial "hero.html" . }}
+	
+		<h1>
+			{{ partial "title.html" . }}
+		</h1>
+	</header><!-- .single_header -->
+	
+	<div>
+		{{ .Content }}
+	</div><!-- .single_content -->
+	
+	<aside>
+		<h2>{{ T "contact" }}</h2>
+	
+		<p>{{ .Site.Params.Contact | safeHTML }}</p>
+	</aside><!-- .single_contact -->
+	
+	{{ partial "sidebar.html" . }}
+</article>
+{{ end }}

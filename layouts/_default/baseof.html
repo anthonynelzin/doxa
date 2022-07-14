@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html {{with .Site.LanguageCode}}lang="{{.}}"{{end}}>
+	<head>
+		{{ partial "head.html" . }}
+		{{ block "scripts" . }}{{ end }}
+	</head>
+	
+	<body class="{{ if .Params.Theme }}{{ .Params.Theme }}{{ else }}purple{{ end }}">
+		<a href="#main" class="skip">{{ T "skip_link" }}</a>
+		
+		<header>
+			{{ partial "header.html" . }}
+		</header>
+		
+		<main id="main">
+			{{ block "main" . }}{{ end }}
+		</main>
+
+		<footer>
+			{{ partial "footer.html" . }}
+		</footer>
+		
+		{{ partial "after.html" . }}
+	</body>
+</html>

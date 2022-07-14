@@ -1,0 +1,71 @@
+skip_link:
+    other: "Aller directement au contenu principal"
+
+by:
+    other: "par"
+colophon:
+    other: "Ours"
+contact:
+    other: "Vous avez aimé cet article ?"
+filter:
+    other: "Filtrer…"
+reset:
+    other: "Réinitialiser"
+results:
+    other: "résultats"
+sections:
+    other: "Rubriques"
+
+cover:
+    other: "Couverture"
+hero:
+    other: "Illustration principale de l’article"
+image:
+    other: "Image"
+offline_image:
+    other: "Des montagnes au crépuscule"
+offline_caption:
+    other: "La vallée de Yosemite. Image <a href='https://unsplash.com/photos/8BFWBUkSqQo'>Rodrigo Soares</a> (Unsplash)."
+swatch:
+    other: "Couverture"
+
+published:
+    other: "Publié le"
+updated:
+    other: "Mis à jour le"
+
+brands:
+    other: "Marques"
+buying:
+    other: "Achat"
+country:
+    other: "Pays"
+genres:
+    other: "Genres"
+info:
+    other: "Informations"
+reading:
+    other: "Lecture"
+shelving:
+    other: "Cote"
+themes:
+    other: "Thèmes"
+    
+by_author:
+    other: "Par auteur"
+by_category:
+    other: "Par rubrique"
+by_country:
+    other: "Par pays"
+by_genre:
+    other: "Par genre"
+by_location:
+    other: "Par localisation"
+by_publisher:
+    other: "Par éditeur"
+by_reading:
+    other: "Par lecture"
+by_theme:
+    other: "Par thème"
+by_year:
+    other: "Par année"

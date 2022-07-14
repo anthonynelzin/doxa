@@ -1,0 +1,26 @@
+{{ $image := .Page.Resources.GetMatch (printf "*%s*" (.Get "src")) }}
+{{ $default := $image.Resize "400x q80 MitchellNetravali" }}
+{{ $small := $image.Resize "575x q80 MitchellNetravali" }}
+{{ $large := $image.Resize "1150x q80 MitchellNetravali" }}
+{{ $figcaption := .Get "caption" }}
+{{ $alt := .Get "alt" }}
+
+<figure role="figure">
+	<picture>
+		<source
+			media="(max-width: 875px)"
+			srcset="{{ $default.RelPermalink }} 1x, {{ $small.RelPermalink }} 2x" />
+		<source
+			media="(min-width: 875px)"
+			srcset="{{ $small.RelPermalink }} 1x, {{ $large.RelPermalink }} 2x" >
+		<img
+			alt="{{ $alt }}"
+			decoding="async"
+			loading="lazy"
+			src="{{ $default.RelPermalink }}"
+			width="{{ $default.Width }}" />
+	</picture>
+	{{ with $figcaption }}
+		<figcaption>{{ $figcaption | safeHTML }}</figcaption>
+	{{ end }}
+</figure>

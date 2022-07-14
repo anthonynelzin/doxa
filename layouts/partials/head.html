@@ -1,0 +1,169 @@
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1, viewport-fit=cover" />
+{{ hugo.Generator }}
+
+<!-- Metadata -->
+{{ if .IsHome }}
+	<title>{{ .Site.Title }}{{ with .Site.Params.Tagline }}&nbsp;|&nbsp;{{ . }}{{ end }}</title>
+	<meta property="og:title" content="{{ .Site.Title }}">
+	<meta name="description" content="{{ .Site.Params.Description }}">
+	<meta property="og:description" content="{{ .Site.Params.Description }}">
+	<meta property="og:url" content="{{ .Site.BaseURL }}">
+{{ else }}
+	<title>
+		{{ if .Params.Auteurs }}
+			{{ delimit .Params.Auteurs ", "}}&nbsp;—&nbsp;{{ .Title }}
+		{{ else if .Params.Marques }}
+			{{ range first 1 .Params.Marques }}{{ . }}{{ end }}&nbsp;—&nbsp;{{ .Title }}
+		{{ else if .Params.Villes }}
+			{{ range first 1 .Params.Villes }}{{ . }}{{ end }}&nbsp;—&nbsp;{{ .Title }}
+		{{ else }}
+			{{ .Title }}
+		{{ end }}
+		|&nbsp;{{ .Site.Title }}
+	</title>
+	<meta property="og:title" content="{{ .Title }} | {{ .Site.Title }}">
+	<meta name="description" content="{{ .Summary }}">
+	<meta property="og:description" content="{{ .Summary }}.">
+	<link rel="canonical" href="{{ .Permalink }}">
+	<meta property="og:url" content="{{ .Permalink }}">
+{{ end }}
+<meta property="og:locale" {{with .Site.LanguageCode}}content="{{.}}"{{end}}>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ .Site.Title }}">
+{{ if $image := .Resources.GetMatch "*.jpg" }}
+	{{ $default := $image.Resize "800x" }}
+	<meta property="og:image" content="{{ $default.Permalink }}">
+	<meta property="og:image:width" content="{{ $default.Width }}">
+	<meta property="og:image:height" content="{{ $default.Height }}">
+{{ else }}
+	<meta property="og:image" content="/icon-512.png">
+	<meta property="og:image:width" content="512">
+	<meta property="og:image:width" content="512">
+{{ end }}
+
+<!-- Indexing -->
+{{ if or (eq .Kind "taxonomy") (eq .Kind "term") }}
+	<meta name="robots" content="noindex, follow" />
+{{ end }}
+
+<!-- Authorship -->
+<link rel="author" href="{{ .Site.Params.Author.Name }}">
+<link rel="me" href="{{ .Site.Params.Author.Link }}" type="text/html">
+
+<!-- Stylesheets -->
+{{ if .IsPage }}
+<style>
+	@media print {
+		#main:before {
+			border: 1px solid;
+			content: "{{ .Site.Params.Print | safeHTML }}";
+			display: block;
+			margin: 0 0 1rem 0;
+			padding: .5rem;
+		}
+	}
+</style>
+{{ end }}
+{{ $cssMain := resources.Get "css/style.css" | resources.Minify | resources.Fingerprint "sha512" }}
+<link rel="stylesheet" media="all" href="{{ $cssMain.Permalink }}">
+{{ $cssPrint := resources.Get "css/print.css" | resources.Minify | resources.Fingerprint "sha512" }}
+<link rel="stylesheet" media="print" href="{{ $cssPrint.Permalink }}">
+
+<!-- Mobile devices -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="{{ .Site.Title }}">
+
+<!-- Colors -->
+{{ if eq .Params.theme "tomato" }}
+	<meta name="theme-color" content="hsl(0, 90%, 99%)" media="(prefers-color-scheme: light)">
+	<meta name="theme-color" content="hsl(0, 5%, 10%)" media="(prefers-color-scheme: dark)">
+
+{{ else if eq .Params.theme "orange" }}
+	<meta name="theme-color" content="hsl(20, 90%, 99%)" media="(prefers-color-scheme: light)">
+	<meta name="theme-color" content="hsl(20, 5%, 10%)" media="(prefers-color-scheme: dark)">
+	
+{{ else if eq .Params.theme "brown" }}
+	<meta name="theme-color" content="hsl(30, 90%, 99%)" media="(prefers-color-scheme: light)">
+	<meta name="theme-color" content="hsl(30, 5%, 10%)" media="(prefers-color-scheme: dark)">
+
+{{ else if eq .Params.theme "yellow" }}
+	<meta name="theme-color" content="hsl(40, 100%, 92%)" media="(prefers-color-scheme: light)">
+	<meta name="theme-color" content="hsl(40, 5%, 10%)" media="(prefers-color-scheme: dark)">
+
+{{ else if eq .Params.theme "lime" }}
+	<meta name="theme-color" content="hsl(70, 100%, 99%)" media="(prefers-color-scheme: light)">
+	<meta name="theme-color" content="hsl(70, 5%, 10%)" media="(prefers-color-scheme: dark)">
+	
+{{ else if eq .Params.theme "green" }}
+	<meta name="theme-color" content="hsl(100, 100%, 99%)" media="(prefers-color-scheme: light)">
+	<meta name="theme-color" content="hsl(100, 5%, 10%)" media="(prefers-color-scheme: dark)">
+	
+{{ else if eq .Params.theme "sage" }}
+	<meta name="theme-color" content="hsl(130, 100%, 99%)" media="(prefers-color-scheme: light)">
+	<meta name="theme-color" content="hsl(130, 5%, 10%)" media="(prefers-color-scheme: dark)">
+
+{{ else if eq .Params.theme "turquoise" }}
+	<meta name="theme-color" content="hsl(160, 100%, 99%)" media="(prefers-color-scheme: light)">
+	<meta name="theme-color" content="hsl(160, 5%, 10%)" media="(prefers-color-scheme: dark)">
+
+{{ else if eq .Params.theme "cyan" }}
+	<meta name="theme-color" content="hsl(190, 100%, 99%)" media="(prefers-color-scheme: light)">
+	<meta name="theme-color" content="hsl(190, 5%, 10%)" media="(prefers-color-scheme: dark)">
+
+{{ else if eq .Params.theme "blue" }}
+	<meta name="theme-color" content="hsl(210, 100%, 99%)" media="(prefers-color-scheme: light)">
+	<meta name="theme-color" content="hsl(210, 5%, 10%)" media="(prefers-color-scheme: dark)">
+
+{{ else if eq .Params.theme "indigo" }}
+	<meta name="theme-color" content="hsl(230, 100%, 99%)" media="(prefers-color-scheme: light)">
+	<meta name="theme-color" content="hsl(230, 5%, 10%)" media="(prefers-color-scheme: dark)">
+
+{{ else if eq .Params.theme "violet" }}
+	<meta name="theme-color" content="hsl(260, 100%, 99%)" media="(prefers-color-scheme: light)">
+	<meta name="theme-color" content="hsl(260, 5%, 10%)" media="(prefers-color-scheme: dark)">
+
+{{ else if eq .Params.theme "lilac" }}
+	<meta name="theme-color" content="hsl(300, 100%, 99%)" media="(prefers-color-scheme: light)">
+	<meta name="theme-color" content="hsl(300, 5%, 10%)" media="(prefers-color-scheme: dark)">
+	
+{{ else if eq .Params.theme "magenta" }}
+	<meta name="theme-color" content="hsl(325, 100%, 99%)" media="(prefers-color-scheme: light)">
+	<meta name="theme-color" content="hsl(325, 5%, 10%)" media="(prefers-color-scheme: dark)">
+
+{{ else if eq .Params.theme "red" }}
+	<meta name="theme-color" content="hsl(350, 100%, 99%)" media="(prefers-color-scheme: light)">
+	<meta name="theme-color" content="hsl(350, 5%, 10%)" media="(prefers-color-scheme: dark)">
+
+{{ else if eq .Params.theme "grey" }}
+	<meta name="theme-color" content="hsl(230, 100%, 99%)" media="(prefers-color-scheme: light)">
+	<meta name="theme-color" content="hsl(250, 5%, 10%)" media="(prefers-color-scheme: dark)">
+
+{{ else if eq .Params.theme "taupe" }}
+	<meta name="theme-color" content="hsl(280, 100%, 99%)" media="(prefers-color-scheme: light)">
+	<meta name="theme-color" content="hsl(280, 5%, 10%)" media="(prefers-color-scheme: dark)">
+
+{{ else if eq .Params.theme "black" }}
+	<meta name="theme-color" content="hsl(280, 0%, 99%)" media="(prefers-color-scheme: light)">
+	<meta name="theme-color" content="hsl(280, 0%, 10%)" media="(prefers-color-scheme: dark)">
+
+{{ else }}
+	<meta name="theme-color" content="hsl(280, 100%, 99%)" media="(prefers-color-scheme: light)">
+	<meta name="theme-color" content="hsl(280, 5%, 10%)" media="(prefers-color-scheme: dark)">
+{{ end }}
+
+<!-- PWA -->
+{{ if .Site.Params.Pwa }}
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="index" href="{{ .Site.BaseURL }}">
+{{ end }}
+
+<!-- Icons -->
+<link rel="icon" href="/favicon.ico">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/icon-512.png">
+
+<!-- RSS -->
+<link rel="alternate" href="{{ .Site.BaseURL }}index.xml" type="application/rss+xml">

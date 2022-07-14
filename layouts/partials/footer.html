@@ -1,0 +1,11 @@
+{{ with .Site.Params.ISSN }}
+	<p>ISSN <a href="https://portal.issn.org/resource/ISSN/{{ . }}">{{ . }}</a></p>
+{{ end }}
+
+{{ with .Site.Params.madein }}
+	<p>{{ . }}</p>
+{{ end }}
+
+{{ with .Site.Params.legal }}
+	<p>{{ .  | safeHTML }}</p>
+{{ end }}

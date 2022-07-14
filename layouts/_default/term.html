@@ -1,0 +1,83 @@
+{{ define "scripts" }}
+{{ $jsFilterizr := resources.Get "js/vanilla.filterizr.min.js" }}
+<script type="text/javascript" src="{{ $jsFilterizr.Permalink }}"></script>
+<script type="text/javascript">
+	window.onload = function() {
+		const options = {
+			animationDuration: 0.25,
+			callbacks: {
+				onFilteringEnd: function() {
+					const counter = document.querySelector('.counter');
+					const number = document.querySelectorAll('.filtr-item').length - document.querySelectorAll('.filteredOut').length;
+					counter.innerText = number;
+				},
+			},
+			layout: 'vertical',
+			multifilterLogicalOperator: 'and',
+		};
+		
+		filterizr = new Filterizr('.archive_content', options);
+	
+		const multiFilters = document.querySelectorAll('.filter button');
+		
+    	Array.from(multiFilters).forEach((node) => node.addEventListener('click', function() {
+    		node.classList.toggle('active');
+    	})
+    	);
+    	
+    	var reset = document.getElementById("reset");
+    	reset.onclick = function() {
+    		location.reload();
+    	}
+	}
+</script>
+{{ end }}
+
+{{ define "main" }}
+{{ $pages := where (where .RegularPages "Type" "!=" "page") "Params.Rssonly" "!=" true }}
+<header class="section_header">
+	<h1 class="section_header_title">{{ .Title }}&nbsp;<span class="count">(<span class="counter">{{ len $pages }}</span> {{ T "results" }})</span></h1>
+	{{ with .Description }}<p class="section_header_description">{{ . }}</p>{{ end }}
+</header><!-- .section_header -->
+
+<div class="filters">
+	<details open class="filter full">
+		<summary>{{ T "by_category" }}</summary>
+		
+		<button data-multifilter="biblio">📘 Biblio</button>
+		<button data-multifilter="bistro">☕️ Bistro</button>
+		<button data-multifilter="blog">👾 Blog</button>
+		<button data-multifilter="memo">📝 Mémo</button>
+		<button data-multifilter="photo">📷 Photo</button>
+		<button data-multifilter="stylo">🖋 Stylo</button>
+	</details>
+
+	<details open class="filter full">
+		<summary>{{ T "by_year" }}</summary>
+	
+		{{ range $pages.GroupByDate "2006" }}
+			<button data-multifilter="{{ .Key }}">{{ .Key }}</button>
+		{{ end }}
+	</details>
+</div><!-- .filters -->
+
+<div class="search">
+	<input type="text" name="filtr-search" value="" placeholder='{{ T "filter" }}' data-search="">
+	
+	<button id="reset">{{ T "reset" }}</button>
+</div>
+
+<div class="archive_content">
+	{{ range $pages }}
+		<article class="section_article filtr-item" data-category="{{ .Section }}, {{ .Date.Format "2006" }}, {{ if .Params.Themes }}{{ delimit .Params.Themes ", " }}{{ end }}, {{ if .Params.Pays }}{{ delimit .Params.Pays ", " }}{{ end }}, {{ if .Params.Genres }}{{ delimit .Params.Genres ", " }}{{ end }}, {{ if .Params.Lectures }}{{ delimit .Params.Lectures ", " }}{{ end }}">		
+			<h3 class="section_article_title">
+				{{ .Parent.Params.Icon }}
+				<a href="{{ .Permalink }}">
+					{{ partial "title.html" . }}
+				</a>
+			</h3>
+			<time datetime='{{ .Date.Format "2006-01-02T15:04:05" }}'>{{ .Date | time.Format ":date_long" }}</time>
+		</article>	
+	{{ end }}
+</div><!-- .archive_content -->
+{{ end }}

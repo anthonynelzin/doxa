@@ -1,0 +1,9 @@
+{{ if .Params.Auteurs }}
+	{{ delimit .Params.Auteurs ", "}}&nbsp;— <i>{{ .Title }}</i>
+{{ else if .Params.Marques }}
+	{{ range first 1 .Params.Marques }}{{ . }}{{ end }}&nbsp;— {{ .Title }}
+{{ else if .Params.Villes }}
+	{{ range first 1 .Params.Villes }}{{ . }}{{ end }}&nbsp;— {{ .Title }}
+{{ else }}
+	{{ .Title }}
+{{ end }}
