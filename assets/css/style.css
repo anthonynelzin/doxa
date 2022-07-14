@@ -651,6 +651,10 @@ ul + p {
 .site-header {
 	background: var(--color-theme);
 	color: var(--color-text-over);
+	display: flex;
+		align-items: end;
+	/* font-size: 1em; */
+	font-size: 1.3em;
 	width: max-content;
 }
 
@@ -755,10 +759,17 @@ ul + p {
 	font-size: 3.125rem;
 }
 
-.single-article main a {
+.single-article a {
 	text-decoration: underline;
 		 text-decoration-color: var(--color-accent);
 		 text-decoration-style: dotted;
+}
+
+.single-article figcaption {
+	color: var(--color-mono);
+	font-size: .6em;
+	font-style: italic;
+	text-align: right;
 }
 
 .single-article main .rssonly {
@@ -769,4 +780,22 @@ ul + p {
     margin: 0 0 1em;
     padding: 1em;
     text-align:center
+}
+
+.single-article main blockquote,
+.single-article main p,
+.single-article main ol,
+.single-article main ul {
+	margin: 0 0 1em 0;
+}
+
+.single-article main blockquote {
+	border-left: .5em solid var(--color-theme);
+	font-style: italic;
+	padding: 0 0 0 1em;
+}
+
+.single-article blockquote i,
+.single-article blockquote em {
+	font-style: normal;
 }
