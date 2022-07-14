@@ -10,11 +10,11 @@
 ******************************
 *****************************/
 
-/**********
-***********
-* Polices *
-***********
-**********/
+/********
+*********
+* Fonts *
+*********
+********/
 
 @font-face {
 	font-family: "Archivo";
@@ -54,11 +54,11 @@
 	--font-mono: ui-monospace, "Monaco", "Courier New", "Courier", monospace;
 }
 
-/***********
-************
-* Couleurs *
-************
-***********/
+/**********
+***********
+* Colours *
+***********
+**********/
 
 .tomato {
 	--color-theme: hsl(0, 90%, 60%);
@@ -494,11 +494,11 @@
 	box-sizing: border-box;
 }
 
-/**********************
-***********************
-* Éléments génériques *
-***********************
-**********************/
+/**********
+***********
+* General *
+***********
+**********/
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -530,8 +530,8 @@ body {
 	color: var(--color-text);
 	display: grid;
 		grid-template-rows: [header] 25vh [content] auto [footer] 1fr [end];
-		column-gap: 1.95rem;
-		row-gap: 5rem;
+		column-gap: 1.777em;
+		row-gap: 4.209em;
 	font-family: var(--font-serif);
 	font-size: clamp(1.2rem, 3vw, 1.3rem);
 	-webkit-hyphens: auto;
@@ -552,9 +552,17 @@ body {
 	-webkit-text-size-adjust: 100%;
 }
 
+.content {
+	display: grid;
+		column-gap: 1.777em;
+		row-gap: 2.369em;
+}
+
 /*  Smaller iPads in portrait */
 @media screen and (min-width: 768px) {
-	body {
+	.content {
+		/* grid-template-columns: subgrid; */
+		grid-template-columns: [header] 15ch [sidebar] 1fr [footer] 20ch [end];
 	}
 }
 
@@ -564,6 +572,11 @@ body {
 		/* grid-template-columns: [header] max-content [sidebar] 1fr [footer] max-content [end]; */
 		grid-template-columns: [header] 20ch [sidebar] 1fr [footer] 20ch [end];
 		margin: 0 auto;
+	}
+	
+	.content {
+		/* grid-template-columns: subgrid; */
+		grid-template-columns: [header] 20ch [sidebar] 1fr [footer] 20ch [end];
 	}
 }
 
@@ -658,11 +671,11 @@ ul + p {
 	margin: 1em 0 1em 0 !important;
 }
 
-/************
-*************
-* Structure *
-*************
-************/
+/**************
+***************
+* Scaffolding *
+***************
+**************/
 
 .site-header {
 	background: var(--color-theme);
@@ -689,13 +702,7 @@ ul + p {
 	padding: 1rem 1.6rem 1rem 1.6rem;
 }
 
-.single-article {
-	display: grid;
-		column-gap: 1.95rem;
-		row-gap: 3.125rem;
-}
-
-.single-article aside {
+.single aside {
 	margin: 0 0 1em 0;
 }
 
@@ -707,30 +714,23 @@ ul + p {
 	padding: 1rem 1rem 1rem 1rem;
 }
 
-/*  Smaller iPads in portrait */
 @media screen and (min-width: 768px) {
-	.single-article {
-		/* grid-template-columns: subgrid; */
-		grid-template-columns: [header] 15ch [sidebar] 1fr [footer] 20ch [end];
-	}
-	
-	.single-article header {
+	.single header {
 		grid-column: header/end;
 		grid-row: 1;
 	}
 	
-	.single-article section {
+	.single section {
 		grid-column: header/sidebar;
 		grid-row: 2;
 	}
 	
-	.single-article main {
+	.single main {
 		grid-column: sidebar/end;
 		grid-row: 2;
 	}
 }
 
-/*  iPad Pro 12,9" in portrait, other devices in landscape */
 @media screen and (min-width: 1024px) {
 	.site-header {
 		grid-column: header;
@@ -747,31 +747,68 @@ ul + p {
 		grid-column: footer;
 		grid-row: footer;
 	}
-	
-	.single-article {
-		/* grid-template-columns: subgrid; */
-		grid-template-columns: [header] 20ch [sidebar] 1fr [footer] 20ch [end];
+}
+
+/*******
+********
+* Home *
+********
+*******/
+
+.home {
+	margin: 0 0 2.369em 0;
+}
+
+.home section h1 {
+	font-size: 1.777em;
+	margin: 0 0 0 0;
+}
+
+@media screen and (min-width: 768px) {
+	.home main {
+		grid-column: sidebar/end;
 	}
 }
 
-/************
-*************
+.home .thumbnails {
+	overflow-x: auto;
+	overflow-y: hidden;
+	white-space: nowrap;
+}
+
+.home .thumbnails .thumbnail {
+	display: inline-block;
+	vertical-align: top;
+	width: 13.288em;
+}
+
+.home .thumbnails .thumbnail:not(:last-of-type) {
+	margin: 0 1em 0 0;
+}
+
+.home .thumbnails .thumbnail a:hover {
+	background: none !important;
+	opacity: .75;
+}
+
+/***********
+************
 * Articles *
 ************
 ***********/
 
-.single-article header h1 {
+.single header h1 {
 	font-size: 2.369em;
 	margin: 0 0 0 0;
 }
 
-.single-article a {
+.single a {
 	text-decoration: underline;
 		 text-decoration-color: var(--color-accent);
 		 text-decoration-style: dotted;
 }
 
-.single-article figcaption {
+.single figcaption {
 	color: var(--color-mono);
 	font-size: .6em;
 	font-style: italic;
@@ -783,22 +820,22 @@ ul + p {
 	margin: 1em 0 0 0;
 }
 
-.single-article main .footnotes ol {
+.single main .footnotes ol {
 	counter-reset: section;
 	list-style-type: none;
 }
 
-.single-article main .footnotes ol li::before {
+.single main .footnotes ol li::before {
 	content: counters(section,".") ". ";
 	counter-increment: section;
 	font-weight: bold;
 }
 
-.single-article main .footnotes ol li p {
+.single main .footnotes ol li p {
 	display: inline;
 }
 
-.single-article main .rssonly {
+.single main .rssonly {
 	background: var(--color-contrast);
     border: .1em solid var(--color-accent);
     border-radius: .5em;
@@ -808,82 +845,82 @@ ul + p {
     text-align:center
 }
 
-.single-article main blockquote,
-.single-article main figure,
-.single-article main p,
-.single-article main ol,
-.single-article main ul {
+.single main blockquote,
+.single main figure,
+.single main p,
+.single main ol,
+.single main ul {
 	margin: 0 0 1em 0;
 }
 
-.single-article main abbr[title],
-.single-article main dfn[title] {
+.single main abbr[title],
+.single main dfn[title] {
 	cursor: help;
     text-decoration: underline;
     	text-decoration-color: var(--color-accent);
     	text-decoration-style: dashed;
 }
 
-.single-article main blockquote {
+.single main blockquote {
 	border-left: .5em solid var(--color-theme);
 	font-style: italic;
 	padding: 0 0 0 1em;
 }
 
-.single-article main blockquote i,
-.single-article main blockquote em {
+.single main blockquote i,
+.single main blockquote em {
 	font-style: normal;
 }
 
-.single-article main code,
-.single-article mainpre {
+.single main code,
+.single mainpre {
 	font-family: var(--font-mono);
 		font-feature-settings: "zero";
 }
 
-.single-article main del {
+.single main del {
 	text-decoration: line-through;
 }
 
-.single-article main h2 {
+.single main h2 {
 	font-size: 1.777em;
 	margin: 2.369em 0 0.422em 0;
 }
 
-.single-article main h3 {
+.single main h3 {
 	font-size: 1.333em;
 	margin: 1.777em 0 0.422em 0;
 }
 
-.single-article main h4 {
+.single main h4 {
 	font-size: 1em;
 	margin: 1.333em 0 0.422em 0;
 }
 
-.single-article main > h2 + h3,
-.single-article main > h3 + h4 {
+.single main > h2 + h3,
+.single main > h3 + h4 {
 	margin: 0.422em 0 0.422em 0;
 }
 
-.single-article main ins {
+.single main ins {
 	text-decoration: none;
 }
 
-.single-article main pre {
+.single main pre {
 	white-space: pre-wrap;
 	margin-bottom: 1em;
 	padding: 1em;
 }
 
-.single-article main sub {
+.single main sub {
 	font-variant-position: sub;
 }
 
-.single-article main sup {
+.single main sup {
 	font-variant-position: super;
 }
 
-.single-article main table {
+.single main table {
 	font-variant-numeric: tabular-nums;
 	border-top: .25em solid var(--color-accent);
 	border-bottom: .25em solid var(--color-accent);
@@ -894,16 +931,16 @@ ul + p {
 	width: 100%;
 }
 
-.single-article main table thead tr {
+.single main table thead tr {
 	border-top: none;
 	border-bottom: .1em solid var(--color-accent);
 }
 
-.single-article main table th,
-.single-article main table td {
+.single main table th,
+.single main table td {
 	padding: .5em 0;
 }
 
-.single-article main table tr {
+.single main table tr {
 	border-top: .1em solid var(--color-contrast);
 }

@@ -3,50 +3,48 @@
 {{ $limit := .Get "limit" }}
 {{ $pages := where (where .Site.RegularPages "Section" $section) "Params.Rssonly" "!=" true }}
 
-<div class="section">
-	<header class="section_header">
+<div class="content home">
+	<section>
 		{{ with .Site.GetPage "section" $section }}
-		<h1 class="section_header_title">{{ .Params.Icon }} <a href="{{ .Permalink }}">{{ .Title }}</a></h1>
-		{{ with .Description }}<p class="section_header_description">{{ . }}</p>{{ end }}
+		<h1>{{ .Params.Icon }} <a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+		{{ with .Description }}<p>{{ . }}</p>{{ end }}
 		{{ end }}
-	</header><!-- .section_header -->
+	</section>
 
 	{{ if eq $type "cover" }}
-		<div class="section_gallery">
+		<main class="thumbnails">
 			{{ range first $limit $pages }}
-				<article class="section_thumbnail">		
+				<article class="thumbnail">		
 					{{ if $cover := .Resources.GetMatch "cover.jpg" }}
 					{{ $default := $cover.Resize "500x" }}
 					{{ $xsmall := $cover.Resize "250x webp" }}
 					{{ $small := $cover.Resize "500x webp" }}
 					<a href="{{ .Permalink }}"><picture><source srcset="{{ $xsmall.RelPermalink }} 1x, {{ $small.RelPermalink }} 2x" type="image/webp"><img alt='{{ T "cover" }} {{ .Title }}' decoding="async" loading="lazy" src="{{ $default.RelPermalink }}" width="{{ $default.Width }}"></picture></a>
 					{{ end }}
-				</article><!-- .section_article -->
+				</article>
 			{{ end }}
-		</div><!-- .section_gallery -->
+		</main>
 	{{ else if eq $type "hero" }}
-		<div class="section_gallery">
+		<main class="thumbnails">
 			{{ range first $limit $pages }}
-				<article class="section_thumbnail">		
+				<article class="thumbnail">		
 					{{ if $hero := .Resources.GetMatch "hero.jpg" }}
 					{{ $default := $hero.Resize "500x" }}
 					{{ $xsmall := $hero.Resize "250x webp" }}
 					{{ $small := $hero.Resize "500x webp" }}
 					<a href="{{ .Permalink }}"><picture><source srcset="{{ $xsmall.RelPermalink }} 1x, {{ $small.RelPermalink }} 2x" type="image/webp"><img alt='{{ T "hero" }} {{ .Title }}' decoding="async" loading="lazy" src="{{ $default.RelPermalink }}" width="{{ $default.Width }}"></picture></a>
 					{{ end }}
-				</article><!-- .section_article -->
+				</article>
 			{{ end }}
-		</div><!-- .section_gallery -->
+		</main>
 	{{ else }}
-		{{ range first $limit $pages }}
-			<article class="section_article">		
-				<h2 class="section_article_title">
-					<a href="{{ .Permalink }}">
-						{{ partial "title.html" . }}
-					</a>
-				</h2>
-				<time datetime='{{ .Date.Format "2006-01-02T15:04:05" }}'>{{ .Date | time.Format ":date_long" }}</time>
-			</article><!-- .section_article -->
-		{{ end }}
+		<main>
+			{{ range first $limit $pages }}
+				<article class="title">		
+					<a href="{{ .Permalink }}"><h2>{{ partial "title.html" . }}</h2></a>
+					<time datetime='{{ .Date.Format "2006-01-02T15:04:05" }}'>{{ .Date | time.Format ":date_long" }}</time>
+				</article>
+			{{ end }}
+		</main>
 	{{ end }}
 </div>
