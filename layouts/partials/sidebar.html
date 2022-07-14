@@ -1,7 +1,6 @@
-
 <!-- Hero images -->
 {{ if $cover := .Resources.GetMatch "cover.jpg" }}
-<div aria-hidden="true">
+<section aria-hidden="true">
 	{{ $default := $cover.Resize "500x" }}
 	{{ $xsmall := $cover.Resize "250x webp" }}
 	{{ $small := $cover.Resize "500x webp" }}
@@ -15,11 +14,11 @@
 			src="{{ $default.RelPermalink }}"
 			width="{{ $default.Width }}" />
 	</picture>
-</div>
+</aside>
 {{ end }}
 
 {{ if $swatch := .Resources.GetMatch "swatch.jpg" }}
-<div aria-hidden="true">
+<section aria-hidden="true">
 	{{ $default := $swatch.Resize "500x" }}
 	{{ $xsmall := $swatch.Resize "250x webp" }}
 	{{ $small := $swatch.Resize "500x webp" }}
@@ -33,25 +32,25 @@
 			src="{{ $default.RelPermalink }}"
 			width="{{ $default.Width }}" />
 	</picture>
-</div>
+</aside>
 {{ end }}
 
 <!-- Date -->
-<div>
+<aside>
 	<h2>{{ T "published" }}</h2>
 	<time datetime='{{ .PublishDate.Format "2006-01-02T15:04:05" }}'>{{ .PublishDate | time.Format ":date_long" }}</time>
-</div>
+</aside>
 
 {{ if .Date }}{{ if ne .PublishDate .Date }}
-<div>
+<aside>
 	<h2>{{ T "updated" }}</h2>
 	<time datetime='{{ .Date.Format "2006-01-02T15:04:05" }}'><a href="{{ .Site.Params.Repo }}/commit/{{ with .GitInfo }}{{ .Hash }}{{ end }}">{{ .Date | time.Format ":date_long" }}</a></time>
-</div>
+</aside>
 {{ end }}{{ end }}
 
 <!-- Taxonomies -->
 {{ if .Params.ISBN }}
-<div>
+<aside>
 	<h2>{{ T "info" }}</h2>
 	<p>{{ range $key, $value := .Params.Auteurs }}  <a href="/auteurs/{{ $value | urlize }}">{{ $value }}</a>{{ if ne $key (sub (len $.Params.Auteurs) 1) }}, {{ else }}{{ end }}
 {{ end }}</p>
@@ -59,68 +58,68 @@
 	<p>{{ with .Params.Annee }}{{ . }}{{ end }}</p>
 	<p>{{ with .Params.Pages }}{{ . }} p.{{ end }}</p>
 	<p>{{ .Params.ISBN }}</p>
-</div>
+</aside>
 {{ end }}
 
 {{ if .Params.Pays }}
-<div>
+<aside>
 	<h2>{{ T "country" }}</h2>
 	{{ range .Params.Pays }}
 	<p><a href="{{ "/pays/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></p>
 	{{ end }}
-</div>
+</aside>
 {{ end }}
 
 {{ if .Params.Marques }}
-<div>
+<aside>
 	<h2>{{ T "brands" }}</h2>
 	{{ range .Params.Marques }}
 	<p><a href="{{ "/marques/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></p>
 	{{ end }}
-</div>
+</aside>
 {{ end }}
 
 {{ if .Params.AchatDate }}
-<div>
+<aside>
 	<h2>{{ T "buying" }}</h2>
 	<p>{{ .Params.AchatDate }}</p>
 	{{ with .Params.AchatLieu }}<p>{{ . }}</p>{{ end }}
 	{{ with .Params.AchatPrix }}<p>{{ . }}</p>{{ end }}
-</div>
+</aside>
 {{ end }}
 
 {{ if .Params.Lectures }}
-<div>
+<aside>
 	<h2>{{ T "reading" }}</h2>
 	{{ range .Params.Lectures }}
 	<p><a href="{{ "/lectures/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></p>
 	{{ end }}
-</div>
+</aside>
 {{ end }}
 
 {{ if .Params.Cotes }}
-<div>
+<aside>
 	<h2>{{ T "shelving" }}</h2>
 	{{ range .Params.Cotes }}
 	<p><a href="{{ "/cotes/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></p>
 	{{ end }}
-</div>
+</aside>
 {{ end }}
 
 {{ if .Params.Genres }}
-<div>
+<aside>
 	<h2>{{ T "genres" }}</h2>
 	{{ range .Params.Genres }}
 	<p><a href="{{ "/genres/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></p>
 	{{ end }}
-</div>
+</aside>
 {{ end }}
 
 {{ if .Params.Themes }}
-<div>
+<aside>
 	<h2>{{ T "themes" }}</h2>
 	{{ range .Params.Themes }}
 	<p><a href="{{ "/themes/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></p>
 	{{ end }}
-</div>
+</aside>
 {{ end }}
