@@ -531,7 +531,7 @@ body {
 	display: grid;
 		grid-template-rows: [header] 25vh [content] auto [footer] 1fr [end];
 		column-gap: 1.777em;
-		row-gap: 4.209em;
+		row-gap: 7.418em;
 	font-family: var(--font-serif);
 	font-size: clamp(1.2rem, 3vw, 1.3rem);
 	-webkit-hyphens: auto;
@@ -555,7 +555,7 @@ body {
 .content {
 	display: grid;
 		column-gap: 1.777em;
-		row-gap: 2.369em;
+		row-gap: 1em;
 }
 
 /*  Smaller iPads in portrait */
@@ -563,6 +563,7 @@ body {
 	.content {
 		/* grid-template-columns: subgrid; */
 		grid-template-columns: [header] 15ch [sidebar] 1fr [footer] 20ch [end];
+		row-gap: 2.369em;
 	}
 }
 
@@ -749,6 +750,49 @@ ul + p {
 	}
 }
 
+/********
+*********
+* Lists *
+*********
+********/
+
+.section p {
+	color: var(--color-mono);
+	font-style: italic;
+}
+
+.title {
+	display: flex;
+		flex-direction: column;
+	margin: 0 0 1em 0;
+}
+
+.title time {
+	color: var(--color-mono);
+}
+
+@media screen and (min-width: 768px) {
+	.title {
+		display: flex;
+			align-items: center;
+			column-gap: 1em;
+			flex-direction: row;
+			justify-content: space-between;
+		margin: 0 0 0.315em 0;
+	}
+	
+	.title h2 {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	
+	.title time {
+		text-align: right;
+		white-space: nowrap;
+	}
+}
+
 /*******
 ********
 * Home *
@@ -756,11 +800,11 @@ ul + p {
 *******/
 
 .home {
-	margin: 0 0 2.369em 0;
+	margin: 0 0 4.209em 0;
 }
 
 .home section h1 {
-	font-size: 1.777em;
+	font-size: 1.333em;
 	margin: 0 0 0 0;
 }
 

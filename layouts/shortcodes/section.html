@@ -4,9 +4,9 @@
 {{ $pages := where (where .Site.RegularPages "Section" $section) "Params.Rssonly" "!=" true }}
 
 <div class="content home">
-	<section>
+	<section class="section">
 		{{ with .Site.GetPage "section" $section }}
-		<h1>{{ .Params.Icon }} <a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+		<h1><a href="{{ .Permalink }}">{{ .Params.Icon }} {{ .Title }}</a></h1>
 		{{ with .Description }}<p>{{ . }}</p>{{ end }}
 		{{ end }}
 	</section>
@@ -41,7 +41,7 @@
 		<main>
 			{{ range first $limit $pages }}
 				<article class="title">		
-					<a href="{{ .Permalink }}"><h2>{{ partial "title.html" . }}</h2></a>
+					<h2><a href="{{ .Permalink }}">{{ partial "title.html" . }}</a></h2>
 					<time datetime='{{ .Date.Format "2006-01-02T15:04:05" }}'>{{ .Date | time.Format ":date_long" }}</time>
 				</article>
 			{{ end }}
