@@ -561,7 +561,6 @@ body {
 /*  Smaller iPads in portrait */
 @media screen and (min-width: 768px) {
 	.content {
-		/* grid-template-columns: subgrid; */
 		grid-template-columns: [header] 15ch [sidebar] 1fr [footer] 20ch [end];
 		row-gap: 2.369em;
 	}
@@ -570,13 +569,11 @@ body {
 /*  iPad Pro 12,9" in portrait, other devices in landscape */
 @media screen and (min-width: 1024px) {
 	body {
-		/* grid-template-columns: [header] max-content [sidebar] 1fr [footer] max-content [end]; */
 		grid-template-columns: [header] 20ch [sidebar] 1fr [footer] 20ch [end];
 		margin: 0 auto;
 	}
 	
 	.content {
-		/* grid-template-columns: subgrid; */
 		grid-template-columns: [header] 20ch [sidebar] 1fr [footer] 20ch [end];
 	}
 }
@@ -620,6 +617,15 @@ i i {
 	font-style: normal;
 }
 
+figure img,
+img,
+figure audio,
+audio
+figure video,
+video {
+	width: 100%;
+}
+
 h1,
 h2,
 h3,
@@ -646,14 +652,17 @@ h3 {
 h4 {
 	font-weight: 400;
 }
-	
-figure img,
-img,
-figure audio,
-audio
-figure video,
-video {
-	width: 100%;
+
+hr {
+	border: 0;
+	color: inherit;
+	margin: 0;
+	padding: 1em 0 1em 0;
+	text-align: center;
+}
+
+hr::before {
+	content: "※";
 }
 
 input {
@@ -710,10 +719,25 @@ ul + p {
 .site-footer {
 	background: var(--color-theme);
 	color: var(--color-text-over);
-	display: flex;
-		justify-items: center;
+	font-family: var(--font-sans);
+	font-size: 0.75em;
+	margin: 0 0 0 auto;
 	padding: 1rem 1rem 1rem 1rem;
+	text-align: center;
+	width: max-content;
 }
+
+.site-footer a {
+	text-decoration: underline;
+		text-decoration-style: dotted;
+}
+
+.site-footer a:focus,
+.site-footer a:hover {
+	background: var(--color-text-over);
+	color: var(--color-theme);
+}
+
 
 @media screen and (min-width: 768px) {
 	.single header {
@@ -747,6 +771,8 @@ ul + p {
 	.site-footer {
 		grid-column: footer;
 		grid-row: footer;
+		margin: 0 0 0 0;
+		width: 100%;
 	}
 }
 
