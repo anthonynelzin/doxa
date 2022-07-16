@@ -1,24 +1,23 @@
 {{ define "main" }}
-<header>
-	<h1>{{ .Params.Icon }} {{ .Title }}&nbsp;<span>(<span>{{ len .Pages }}</span> {{ T "results" }})</span></h1>
-	{{ with .Description }}<p class="section_header_description">{{ . }}</p>{{ end }}
-</header><!-- .section_header -->
-
-<div>
-	{{ $type := .Type }}
-	{{ range $key, $value := .Data.Terms.Alphabetical }}
-		{{ $name := .Name }}
-		{{ $count := .Count }}
-		{{ with $.Site.GetPage (printf "/%s/%s" $type $name) }}
-			<article class="filtr-item" data-category="{{ .Section }}, {{ .Date.Format "2006" }}" data-title="{{ .Title }}">		
-				<h3>
-					<a href="{{ .Permalink }}">
-						{{ .Name }}
-					</a>
-				</h3>
-				<p>({{ $count }})</p>
-			</article>
-		{{ end }}
-	{{ end }}
-</div><!-- .archive_content -->
+	<div class="content archive list">
+	{{ $pages := where (where .RegularPages "Type" "!=" "page") "Params.Rssonly" "!=" true }}
+		<header>
+			<h1>{{ .Params.Icon }} {{ .Title }}</h1>
+			<p class="description"><span class="counter">{{ len .Pages }}</span> {{ T "results" }}</p>
+		</header>
+		
+		<main class="items">
+			{{ $type := .Type }}
+			{{ range $key, $value := .Data.Terms.Alphabetical }}
+				{{ $name := .Name }}
+				{{ $count := .Count }}
+				{{ with $.Site.GetPage (printf "/%s/%s" $type $name) }}
+					<article class="title">
+						<h2><a href="{{ .Permalink }}">{{ .Name }}</a></h2>
+						<p class="description">{{ $count }} {{ T "results" }}</p>
+					</article>	
+				{{ end }}
+			{{ end }}
+		</main>
+	</div>
 {{ end }}

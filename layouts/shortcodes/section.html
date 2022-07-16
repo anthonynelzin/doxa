@@ -3,13 +3,13 @@
 {{ $limit := .Get "limit" }}
 {{ $pages := where (where .Site.RegularPages "Section" $section) "Params.Rssonly" "!=" true }}
 
-<div class="content home">
-	<section class="section">
+<div class="content home list">
+	<header>
 		{{ with .Site.GetPage "section" $section }}
 		<h1><a href="{{ .Permalink }}">{{ .Params.Icon }} {{ .Title }}</a></h1>
-		{{ with .Description }}<p>{{ . }}</p>{{ end }}
+		{{ with .Description }}<p class="description">{{ . }}</p>{{ end }}
 		{{ end }}
-	</section>
+	</header>
 
 	{{ if eq $type "cover" }}
 		<main class="thumbnails">

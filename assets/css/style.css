@@ -589,16 +589,21 @@ a:hover {
 	color: var(--color-text-over);
 }
 
+aside {
+	font-size: 0.75em;
+	margin: 0 0 1em 0;
+}
+
 button {
 	background-color: var(--color-background);
-	border: .1em solid var(--color-accent);
-	border-radius: .5em;
+	border: 1px solid var(--color-accent);
+	border-radius: 0.422em;;
 	color: var(--color-accent);
-	padding: .6em 1em;
+	margin: 0.422em 0 0 0;
+	padding: 0.422em 0.563em 0.422em 0.563em;
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
-	font-size: 1em;
 }
 
 button:hover {
@@ -633,8 +638,8 @@ h4 {
 	font-family: var(--font-sans);
 		font-size: 1em;
 	line-height: 1;
-	margin: 0;
-	padding: 0;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
 }
 
 h1 {
@@ -656,6 +661,7 @@ h4 {
 hr {
 	border: 0;
 	color: inherit;
+	font-family: var(--font-sans);
 	margin: 0;
 	padding: 1em 0 1em 0;
 	text-align: center;
@@ -663,13 +669,6 @@ hr {
 
 hr::before {
 	content: "※";
-}
-
-input {
-	border: .1em solid var(--color-accent);
-	border-radius: .5em;
-	font-size: 1em;
-	padding: .5em 1em;
 }
 
 ul {
@@ -711,10 +710,6 @@ ul + p {
 	padding: 1rem 1.6rem 1rem 1.6rem;
 	text-align: center;
 	width: 100%;
-}
-
-.single aside {
-	margin: 0 0 1em 0;
 }
 
 .site-footer {
@@ -783,39 +778,28 @@ ul + p {
 *********
 ********/
 
-.section p {
+.list header h1 {
+	font-size: 1.333em;
+}
+
+.list .description {
 	color: var(--color-mono);
 	font-style: italic;
 }
 
-.title {
-	display: flex;
-		flex-direction: column;
-	margin: 0 0 1em 0;
+.list .title {
+	padding: 0 0 1em 0;
+	width: 100% !important;
 }
 
-.title time {
+.list .title time {
 	color: var(--color-mono);
 }
 
 @media screen and (min-width: 768px) {
-	.title {
-		display: flex;
-			align-items: center;
-			column-gap: 1em;
-			flex-direction: row;
-			justify-content: space-between;
-		margin: 0 0 0.315em 0;
-	}
-	
-	.title h2 {
+	.list .title h2 {
 		overflow: hidden;
 		text-overflow: ellipsis;
-		white-space: nowrap;
-	}
-	
-	.title time {
-		text-align: right;
 		white-space: nowrap;
 	}
 }
@@ -828,11 +812,6 @@ ul + p {
 
 .home {
 	margin: 0 0 4.209em 0;
-}
-
-.home section h1 {
-	font-size: 1.333em;
-	margin: 0 0 0 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -864,13 +843,44 @@ ul + p {
 
 /***********
 ************
+* Archives *
+************
+***********/
+
+.archive {
+
+}
+
+@media screen and (min-width: 768px) {
+	.archive header {
+		grid-column: 1;
+	}
+	
+	.archive section {
+		grid-column: 1;
+	}
+	
+	.archive main {
+		grid-column: 2/-1;
+	}
+}
+
+.archive .search {
+	text-align: right;
+}
+
+/***********
+************
 * Articles *
 ************
 ***********/
 
+.single .hero {
+	margin: 0 0 2.369em 0;
+}
+
 .single header h1 {
 	font-size: 2.369em;
-	margin: 0 0 0 0;
 }
 
 .single a {
@@ -881,13 +891,13 @@ ul + p {
 
 .single figcaption {
 	color: var(--color-mono);
-	font-size: .6em;
+	font-size: .75em;
 	font-style: italic;
 	text-align: right;
 }
 
 .single_content .footnotes {
-	font-size: .9em;
+	font-size: 1em;
 	margin: 1em 0 0 0;
 }
 
@@ -909,7 +919,7 @@ ul + p {
 .single main .rssonly {
 	background: var(--color-contrast);
     border: .1em solid var(--color-accent);
-    border-radius: .5em;
+    border-radius: 0.422em;
     font-family: var(--font-sans);
     margin: 0 0 1em;
     padding: 1em;
