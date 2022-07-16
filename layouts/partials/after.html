@@ -1,3 +1,12 @@
+{{ if .IsPage }}
+	{{ $barefoot := resources.Get "js/barefoot.js" | resources.Minify | resources.Fingerprint "sha512" }}
+	<script src="{{ $barefoot.Permalink }}" type="application/javascript"></script>
+	<script type="application/javascript">
+		lf = new BareFoot();
+  lf.init();
+	</script>
+{{ end }}
+
 {{ if .Site.Params.Pwa }}
 	<script>
 		if ('serviceWorker' in navigator) {
