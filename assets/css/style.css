@@ -699,7 +699,6 @@ ul + p {
 	display: flex;
 		align-items: end;
 	height: 100%;
-	width: 100%;
 }
 
 .site-header:has(a:hover) {
@@ -707,9 +706,7 @@ ul + p {
 }
 
 .site-header h1 {
-	padding: 1rem 1.6rem 1rem 1.6rem;
-	text-align: center;
-	width: 100%;
+	padding: 1rem 1.333rem 1rem 1.333rem;
 }
 
 .site-footer {
@@ -718,8 +715,8 @@ ul + p {
 	font-family: var(--font-sans);
 	font-size: 0.75em;
 	margin: 0 0 0 auto;
-	padding: 1rem 1rem 1rem 1rem;
-	text-align: center;
+	padding: 1rem 1.333rem 1rem 1.333rem;
+	text-align: right;
 	width: max-content;
 }
 
@@ -732,6 +729,10 @@ ul + p {
 .site-footer a:hover {
 	background: var(--color-text-over);
 	color: var(--color-theme);
+}
+
+.site-footer nav {
+	margin: 1.333em 0 1.333em 0;
 }
 
 

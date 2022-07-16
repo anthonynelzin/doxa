@@ -6,8 +6,6 @@
 	<p>{{ .  | safeHTML }}</p>
 {{ end }}
 
-<hr/>
-
 <nav>
 	{{ range .Site.Menus.navigation }}
 		<p><a href="{{ .URL }}">{{ .Name }}</a></p>
@@ -15,6 +13,5 @@
 </nav>
 
 {{ with .Site.Params.ISSN }}
-	<hr/>
 	<p>ISSN <a href="https://portal.issn.org/resource/ISSN/{{ . }}">{{ . }}</a></p>
 {{ end }}
