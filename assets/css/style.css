@@ -61,10 +61,10 @@
 **********/
 
 .tomato {
+	--color-background: hsl(0, 90%, 96%);
 	--color-theme: hsl(0, 90%, 60%);
-	--color-accent: hsl(350, 80%, 30%);
-	--color-contrast: hsl(0, 90%, 92%);
-	--color-background: hsl(0, 90%, 99%);
+	--color-accent: hsl(350, 80%, 60%);
+	--color-contrast: hsl(0, 90%, 94%);
 	--color-text: hsl(0, 90%, 5%);
 	--color-text-over: var(--color-text);
 	--color-shadow: hsla(350, 10%, 30%, 30%);
@@ -72,10 +72,10 @@
 }
 
 .orange {
+	--color-background: hsl(20, 90%, 96%);
 	--color-theme: hsl(20, 90%, 60%);
-	--color-accent: hsl(0, 80%, 30%);
-	--color-contrast: hsl(20, 90%, 92%);
-	--color-background: hsl(20, 90%, 99%);
+	--color-accent: hsl(0, 80%, 60%);
+	--color-contrast: hsl(20, 90%, 94%);
 	--color-text: hsl(20, 90%, 5%);
 	--color-text-over: var(--color-text);
 	--color-shadow: hsla(0, 10%, 30%, 30%);
@@ -83,10 +83,10 @@
 }
 
 .brown {
-	--color-theme: hsl(30, 30%, 50%);
-	--color-accent: hsl(20, 50%, 25%);
-	--color-contrast: hsl(30, 50%, 92%);
-	--color-background: hsl(30, 90%, 99%);
+	--color-background: hsl(30, 90%, 96%);
+	--color-theme: hsl(30, 40%, 50%);
+	--color-accent: hsl(20, 80%, 60%);
+	--color-contrast: hsl(30, 90%, 94%);
 	--color-text: hsl(30, 90%, 5%);
 	--color-text-over: var(--color-text);
 	--color-shadow: hsla(20, 10%, 25%, 30%);
@@ -94,10 +94,10 @@
 }
 
 .yellow {
+	--color-background: hsl(40, 100%, 96%);
 	--color-theme: hsl(40, 100%, 60%);
-	--color-accent: hsl(30, 60%, 30%);
-	--color-contrast: hsl(40, 100%, 92%);
-	--color-background: hsl(40, 100%, 99%);
+	--color-accent: hsl(30, 80%, 60%);
+	--color-contrast: hsl(40, 100%, 90%);
 	--color-text: hsl(40, 100%, 5%);
 	--color-text-over: var(--color-text);
 	--color-shadow: hsla(30, 10%, 30%, 30%);
@@ -105,10 +105,10 @@
 }
 
 .lime {
+	--color-background: hsl(70, 100%, 96%);
 	--color-theme: hsl(70, 75%, 60%);
-	--color-accent: hsl(100, 20%, 30%);
-	--color-contrast: hsl(70, 75%, 92%);
-	--color-background: hsl(70, 100%, 99%);
+	--color-accent: hsl(100, 60%, 60%);
+	--color-contrast: hsl(70, 75%, 90%);
 	--color-text: hsl(70, 100%, 5%);
 	--color-text-over: var(--color-text);
 	--color-shadow: hsla(100, 10%, 30%, 30%);
@@ -116,10 +116,10 @@
 }
 
 .green {
+	--color-background: hsl(100, 100%, 96%);
 	--color-theme: hsl(100, 50%, 60%);
-	--color-accent: hsl(130, 40%, 25%);
-	--color-contrast: hsl(100, 50%, 92%);
-	--color-background: hsl(100, 100%, 99%);
+	--color-accent: hsl(130, 40%, 60%);
+	--color-contrast: hsl(100, 60%, 90%);
 	--color-text: hsl(100, 100%, 5%);
 	--color-text-over: var(--color-text);
 	--color-shadow: hsla(130, 10%, 25%, 30%);
@@ -127,10 +127,10 @@
 }
 
 .sage {
+	--color-background: hsl(130, 100%, 96%);
 	--color-theme: hsl(130, 20%, 60%);
-	--color-accent: hsl(160, 40%, 25%);
-	--color-contrast: hsl(130, 20%, 92%);
-	--color-background: hsl(130, 100%, 99%);
+	--color-accent: hsl(160, 10%, 60%);
+	--color-contrast: hsl(130, 60%, 90%);
 	--color-text: hsl(130, 100%, 5%);
 	--color-text-over: var(--color-text);
 	--color-shadow: hsla(160, 10%, 25%, 30%);
@@ -138,10 +138,10 @@
 }
 
 .turquoise {
+	--color-background: hsl(160, 100%, 96%);
 	--color-theme: hsl(160, 60%, 45%);
-	--color-accent: hsl(130, 50%, 25%);
-	--color-contrast: hsl(160, 60%, 92%);
-	--color-background: hsl(160, 100%, 99%);
+	--color-accent: hsl(130, 30%, 60%);
+	--color-contrast: hsl(160, 60%, 90%);
 	--color-text: hsl(160, 100%, 5%);
 	--color-text-over: var(--color-text);
 	--color-shadow: hsla(130, 10%, 25%, 30%);
@@ -149,10 +149,10 @@
 }
 
 .cyan {
-	--color-theme: hsl(190, 50%, 60%);
-	--color-accent: hsl(210, 30%, 25%);
-	--color-contrast: hsl(190, 50%, 92%);
-	--color-background: hsl(190, 100%, 99%);
+	--color-background: hsl(190, 100%, 96%);
+	--color-theme: hsl(190, 60%, 60%);
+	--color-accent: hsl(210, 40%, 65%);
+	--color-contrast: hsl(190, 50%, 90%);
 	--color-text: hsl(190, 100%, 5%);
 	--color-text-over: var(--color-text);
 	--color-shadow: hsla(210, 10%, 25%, 30%);
@@ -160,10 +160,10 @@
 }
 
 .blue {
+	--color-background: hsl(210, 100%, 96%);
 	--color-theme: hsl(210, 75%, 70%);
-	--color-accent: hsl(230, 30%, 25%);
-	--color-contrast: hsl(210, 75%, 92%);
-	--color-background: hsl(210, 100%, 99%);
+	--color-accent: hsl(230, 65%, 75%);
+	--color-contrast: hsl(210, 75%, 90%);
 	--color-text: hsl(210, 100%, 5%);
 	--color-text-over: var(--color-text);
 	--color-shadow: hsla(230, 10%, 25%, 30%);
@@ -171,10 +171,10 @@
 }
 
 .indigo {
+	--color-background: hsl(230, 100%, 96%);
 	--color-theme: hsl(230, 50%, 40%);
-	--color-accent: hsl(230, 60%, 25%);
-	--color-contrast: hsl(230, 50%, 92%);
-	--color-background: hsl(230, 100%, 99%);
+	--color-accent: hsl(260, 40%, 40%);
+	--color-contrast: hsl(230, 50%, 90%);
 	--color-text: hsl(230, 100%, 5%);
 	--color-text-over: var(--color-background);
 	--color-shadow: hsla(230, 40%, 25%, 30%);
@@ -182,10 +182,10 @@
 }
 
 .violet {
+	--color-background: hsl(260, 100%, 96%);
 	--color-theme: hsl(260, 55%, 75%);
-	--color-accent: hsl(280, 30%, 25%);
-	--color-contrast: hsl(260, 55%, 92%);
-	--color-background: hsl(260, 100%, 99%);
+	--color-accent: hsl(280, 65%, 75%);
+	--color-contrast: hsl(260, 55%, 90%);
 	--color-text: hsl(260, 100%, 5%);
 	--color-text-over: var(--color-text);
 	--color-shadow: hsla(280, 10%, 25%, 30%);
@@ -193,10 +193,10 @@
 }
 
 .purple {
+	--color-background: hsl(280, 100%, 96%);
 	--color-theme: hsl(280, 55%, 30%);
-	--color-accent: hsl(260, 30%, 25%);
-	--color-contrast: hsl(280, 55%, 92%);
-	--color-background: hsl(280, 100%, 99%);
+	--color-accent: hsl(300, 65%, 30%);
+	--color-contrast: hsl(280, 55%, 90%);
 	--color-text: hsl(280, 100%, 5%);
 	--color-text-over: var(--color-background);
 	--color-shadow: hsla(260, 10%, 0%, 30%);
@@ -204,10 +204,10 @@
 }
 
 .lilac {
+	--color-background: hsl(300, 100%, 96%);
 	--color-theme: hsl(300, 55%, 30%);
-	--color-accent: hsl(325, 30%, 25%);
-	--color-contrast: hsl(300, 55%, 92%);
-	--color-background: hsl(300, 100%, 99%);
+	--color-accent: hsl(325, 65%, 30%);
+	--color-contrast: hsl(300, 55%, 90%);
 	--color-text: hsl(300, 100%, 5%);
 	--color-text-over: var(--color-background);
 	--color-shadow: hsla(325, 10%, 25%, 30%);
@@ -215,10 +215,10 @@
 }
 
 .magenta {
+	--color-background: hsl(325, 100%, 96%);
 	--color-theme: hsl(325, 60%, 35%);
-	--color-accent: hsl(345, 50%, 25%);
-	--color-contrast: hsl(325, 60%, 92%);
-	--color-background: hsl(325, 100%, 99%);
+	--color-accent: hsl(345, 70%, 35%);
+	--color-contrast: hsl(325, 60%, 90%);
 	--color-text: hsl(325, 100%, 5%);
 	--color-text-over: var(--color-background);
 	--color-shadow: hsla(345, 10%, 25%, 30%);
@@ -226,10 +226,10 @@
 }
 
 .red {
-	--color-theme: hsl(345, 90%, 35%);
-	--color-accent: hsl(0, 60%, 30%);
-	--color-contrast: hsl(340, 90%, 92%);
-	--color-background: hsl(345, 100%, 99%);
+	--color-background: hsl(345, 100%, 96%);
+	--color-theme: hsl(345, 90%, 30%);
+	--color-accent: hsl(0, 100%, 30%);
+	--color-contrast: hsl(340, 90%, 90%);
 	--color-text: hsl(345, 100%, 5%);
 	--color-text-over: var(--color-background);
 	--color-shadow: hsla(0, 10%, 30%, 30%);
@@ -237,32 +237,32 @@
 }
 
 .grey {
-	--color-theme: hsl(230, 5%, 65%);
-	--color-accent: hsl(210, 30%, 25%);
-	--color-contrast: hsl(230, 5%, 92%);
-	--color-background: hsl(230, 100%, 99%);
+	--color-background: hsl(230, 100%, 96%);
+	--color-theme: hsl(230, 10%, 25%);
+	--color-accent: hsl(260, 20%, 25%);
+	--color-contrast: hsl(230, 5%, 90%);
 	--color-text: hsl(230, 100%, 5%);
-	--color-text-over: var(--color-text);
+	--color-text-over: var(--color-background);
 	--color-shadow: hsla(210, 10%, 25%, 30%);
 	--color-mono: hsl(210, 10%, 30%);
 }
 
 .taupe {
-	--color-theme: hsl(280, 5%, 50%);
-	--color-accent: hsl(260, 30%, 20%);
-	--color-contrast: hsl(280, 5%, 92%);
-	--color-background: hsl(280, 100%, 99%);
+	--color-background: hsl(280, 100%, 96%);
+	--color-theme: hsl(280, 20%, 25%);
+	--color-accent: hsl(300, 20%, 25%);
+	--color-contrast: hsl(280, 5%, 90%);
 	--color-text: hsl(280, 100%, 5%);
-	--color-text-over: var(--color-text);
+	--color-text-over: var(--color-background);
 	--color-shadow: hsla(260, 10%, 20%, 30%);
 	--color-mono: hsl(260, 10%, 25%);
 }
 
 .black {
-	--color-theme: hsl(280, 0%, 20%);
-	--color-accent: hsl(260, 0%, 5%);
-	--color-contrast: hsl(280, 0%, 92%);
-	--color-background: hsl(280, 0%, 99%);
+	--color-background: hsl(280, 0%, 96%);
+	--color-theme: hsl(280, 0%, 15%);
+	--color-accent: hsl(300, 0%, 5%);
+	--color-contrast: hsl(280, 0%, 94%);
 	--color-text: hsl(280, 0%, 5%);
 	--color-text-over: var(--color-background);
 	--color-shadow: hsla(260, 0%, 5%, 30%);
@@ -276,208 +276,208 @@
 
 @media (prefers-color-scheme: dark) {
 	.tomato {
-		--color-theme: hsl(0, 10%, 30%);
-		--color-accent: hsl(350, 50%, 75%);
-		--color-contrast: hsl(0, 90%, 92%);
-		--color-background: hsl(0, 5%, 10%);
+		--color-background: hsl(0, 25%, 10%);
+		--color-theme: hsl(0, 75%, 30%);
+		--color-accent: hsl(350, 60%, 30%);
+		--color-contrast: hsl(0, 90%, 94%);
 		--color-text: hsl(0, 10%, 80%);
 		--color-text-over: hsl(0, 10%, 95%);
-		--color-shadow: hsla(350, 10%, 30%, 30%);
+		--color-shadow: hsla(350, 10%, 10%, 30%);
 		--color-mono: hsl(350, 10%, 70%);
 	}
 
 	.orange {
-		--color-theme: hsl(20, 10%, 30%);
-		--color-accent: hsl(0, 50%, 75%);
-		--color-contrast: hsl(20, 90%, 92%);
-		--color-background: hsl(20, 5%, 10%);
+		--color-background: hsl(20, 25%, 10%);
+		--color-theme: hsl(20, 75%, 30%);
+		--color-accent: hsl(0, 60%, 30%);
+		--color-contrast: hsl(20, 90%, 94%);
 		--color-text: hsl(20, 10%, 80%);
 		--color-text-over: hsl(20, 10%, 95%);
-		--color-shadow: hsla(0, 10%, 30%, 30%);
+		--color-shadow: hsla(0, 10%, 10%, 30%);
 		--color-mono: hsl(0, 10%, 70%);
 	}
 
 	.brown {
-		--color-theme: hsl(30, 10%, 30%);
-		--color-accent: hsl(20, 50%, 75%);
-		--color-contrast: hsl(30, 50%, 92%);
-		--color-background: hsl(30, 5%, 10%);
+		--color-background: hsl(30, 25%, 10%);
+		--color-theme: hsl(30, 75%, 30%);
+		--color-accent: hsl(20, 60%, 30%);
+		--color-contrast: hsl(30, 50%, 94%);
 		--color-text: hsl(30, 10%, 80%);
 		--color-text-over: hsl(30, 10%, 95%);
-		--color-shadow: hsla(20, 10%, 25%, 30%);
+		--color-shadow: hsla(20, 10%, 10%, 30%);
 		--color-mono: hsl(20, 10%, 70%);
 	}
 
 	.yellow {
-		--color-theme: hsl(40, 10%, 30%);
-		--color-accent: hsl(30, 50%, 75%);
-		--color-contrast: hsl(40, 100%, 92%);
-		--color-background: hsl(40, 5%, 10%);
+		--color-background: hsl(40, 25%, 10%);
+		--color-theme: hsl(40, 75%, 30%);
+		--color-accent: hsl(30, 60%, 30%);
+		--color-contrast: hsl(40, 100%, 94%);
 		--color-text: hsl(40, 10%, 80%);
 		--color-text-over: hsl(40, 10%, 95%);
-		--color-shadow: hsla(30, 10%, 30%, 30%);
+		--color-shadow: hsla(30, 10%, 10%, 30%);
 		--color-mono: hsl(30, 10%, 70%);
 	}
 
 	.lime {
-		--color-theme: hsl(70, 10%, 30%);
-		--color-accent: hsl(40, 50%, 75%);
-		--color-contrast: hsl(70, 75%, 92%);
-		--color-background: hsl(70, 5%, 10%);
+		--color-background: hsl(70, 25%, 10%);
+		--color-theme: hsl(70, 75%, 25%);
+		--color-accent: hsl(40, 60%, 25%);
+		--color-contrast: hsl(70, 75%, 94%);
 		--color-text: hsl(70, 10%, 80%);
 		--color-text-over: hsl(70, 10%, 95%);
-		--color-shadow: hsla(40, 10%, 30%, 30%);
+		--color-shadow: hsla(40, 10%, 10%, 30%);
 		--color-mono: hsl(40, 10%, 70%);
 	}
 
 	.green {
-		--color-theme: hsl(100, 10%, 30%);
-		--color-accent: hsl(70, 50%, 75%);
-		--color-contrast: hsl(100, 50%, 92%);
-		--color-background: hsl(100, 5%, 10%);
+		--color-background: hsl(100, 25%, 10%);
+		--color-theme: hsl(100, 75%, 25%);
+		--color-accent: hsl(70, 60%, 25%);
+		--color-contrast: hsl(100, 50%, 94%);
 		--color-text: hsl(100, 10%, 80%);
 		--color-text-over: hsl(100, 10%, 95%);
-		--color-shadow: hsla(70, 10%, 25%, 30%);
+		--color-shadow: hsla(70, 10%, 10%, 30%);
 		--color-mono: hsl(70, 10%, 70%);
 	}
 
 	.sage {
-		--color-theme: hsl(130, 10%, 30%);
-		--color-accent: hsl(100, 50%, 75%);
-		--color-contrast: hsl(130, 20%, 92%);
-		--color-background: hsl(130, 5%, 10%);
+		--color-background: hsl(130, 25%, 10%);
+		--color-theme: hsl(130, 75%, 25%);
+		--color-accent: hsl(100, 60%, 25%);
+		--color-contrast: hsl(130, 20%, 94%);
 		--color-text: hsl(130, 10%, 80%);
 		--color-text-over: hsl(130, 10%, 95%);
-		--color-shadow: hsla(100, 10%, 25%, 30%);
+		--color-shadow: hsla(100, 10%, 10%, 30%);
 		--color-mono: hsl(100, 10%, 70%);
 	}
 
 	.turquoise {
-		--color-theme: hsl(160, 10%, 30%);
-		--color-accent: hsl(130, 50%, 75%);
-		--color-contrast: hsl(160, 60%, 92%);
-		--color-background: hsl(160, 5%, 10%);
+		--color-background: hsl(160, 25%, 10%);
+		--color-theme: hsl(160, 75%, 25%);
+		--color-accent: hsl(130, 60%, 25%);
+		--color-contrast: hsl(160, 60%, 94%);
 		--color-text: hsl(160, 10%, 80%);
 		--color-text-over: hsl(160, 10%, 95%);
-		--color-shadow: hsla(130, 10%, 25%, 30%);
+		--color-shadow: hsla(130, 10%, 10%, 30%);
 		--color-mono: hsl(130, 10%, 70%);
 	}
 
 	.cyan {
-		--color-theme: hsl(190, 10%, 30%);
-		--color-accent: hsl(160, 50%, 75%);
-		--color-contrast: hsl(190, 50%, 92%);
-		--color-background: hsl(190, 5%, 10%);
+		--color-background: hsl(190, 25%, 10%);
+		--color-theme: hsl(190, 75%, 25%);
+		--color-accent: hsl(160, 60%, 25%);
+		--color-contrast: hsl(190, 50%, 94%);
 		--color-text: hsl(190, 10%, 80%);
 		--color-text-over: hsl(190, 10%, 95%);
-		--color-shadow: hsla(160, 10%, 25%, 30%);
+		--color-shadow: hsla(160, 10%, 10%, 30%);
 		--color-mono: hsl(160, 10%, 70%);
 	}
 
 	.blue {
-		--color-theme: hsl(210, 10%, 30%);
-		--color-accent: hsl(190, 50%, 75%);
-		--color-contrast: hsl(210, 75%, 92%);
-		--color-background: hsl(210, 5%, 10%);
+		--color-background: hsl(210, 25%, 10%);
+		--color-theme: hsl(210, 75%, 25%);
+		--color-accent: hsl(190, 60%, 25%);
+		--color-contrast: hsl(210, 75%, 94%);
 		--color-text: hsl(210, 10%, 80%);
 		--color-text-over: hsl(210, 10%, 95%);
-		--color-shadow: hsla(190, 10%, 25%, 30%);
+		--color-shadow: hsla(190, 10%, 10%, 30%);
 		--color-mono: hsl(190, 10%, 70%);
 	}
 
 	.indigo {
-		--color-theme: hsl(230, 10%, 30%);
-		--color-accent: hsl(210, 50%, 75%);
-		--color-contrast: hsl(230, 50%, 92%);
-		--color-background: hsl(230, 5%, 10%);
+		--color-background: hsl(230, 25%, 10%);
+		--color-theme: hsl(230, 75%, 25%);
+		--color-accent: hsl(210, 60%, 25%);
+		--color-contrast: hsl(230, 50%, 94%);
 		--color-text: hsl(230, 10%, 80%);
 		--color-text-over: hsl(230, 10%, 95%);
-		--color-shadow: hsla(210, 10%, 25%, 30%);
+		--color-shadow: hsla(210, 10%, 10%, 30%);
 		--color-mono: hsl(210, 10%, 70%);
 	}
 
 	.violet {
-		--color-theme: hsl(260, 10%, 30%);
-		--color-accent: hsl(230, 50%, 75%);
-		--color-contrast: hsl(260, 55%, 92%);
-		--color-background: hsl(260, 5%, 10%);
+		--color-background: hsl(260, 25%, 10%);
+		--color-theme: hsl(260, 75%, 25%);
+		--color-accent: hsl(230, 60%, 25%);
+		--color-contrast: hsl(260, 55%, 94%);
 		--color-text: hsl(260, 10%, 80%);
 		--color-text-over: hsl(260, 10%, 95%);
-		--color-shadow: hsla(230, 10%, 25%, 30%);
+		--color-shadow: hsla(230, 10%, 10%, 30%);
 		--color-mono: hsl(230, 10%, 70%);
 	}
 
 	.purple {
-		--color-theme: hsl(280, 10%, 30%);
-		--color-accent: hsl(260, 50%, 75%);
-		--color-contrast: hsl(280, 55%, 92%);
-		--color-background: hsl(280, 5%, 10%);
+		--color-background: hsl(280, 25%, 10%);
+		--color-theme: hsl(280, 75%, 25%);
+		--color-accent: hsl(260, 60%, 25%);
+		--color-contrast: hsl(280, 55%, 94%);
 		--color-text: hsl(280, 10%, 80%);
 		--color-text-over: hsl(280, 10%, 95%);
-		--color-shadow: hsla(260, 10%, 25%, 30%);
+		--color-shadow: hsla(260, 10%, 10%, 30%);
 		--color-mono: hsl(260, 10%, 70%);
 	}
 
 	.lilac {
-		--color-theme: hsl(300, 10%, 30%);
-		--color-accent: hsl(280, 50%, 75%);
-		--color-contrast: hsl(300, 55%, 92%);
-		--color-background: hsl(300, 5%, 10%);
+		--color-background: hsl(300, 25%, 10%);
+		--color-theme: hsl(300, 75%, 25%);
+		--color-accent: hsl(280, 60%, 25%);
+		--color-contrast: hsl(300, 55%, 94%);
 		--color-text: hsl(300, 10%, 80%);
 		--color-text-over: hsl(300, 10%, 95%);
-		--color-shadow: hsla(280, 10%, 25%, 30%);
+		--color-shadow: hsla(280, 10%, 10%, 30%);
 		--color-mono: hsl(280, 10%, 70%);
 	}
 
 	.magenta {
-		--color-theme: hsl(325, 10%, 30%);
-		--color-accent: hsl(300, 50%, 75%);
-		--color-contrast: hsl(325, 60%, 92%);
-		--color-background: hsl(325, 5%, 10%);
+		--color-background: hsl(325, 25%, 10%);
+		--color-theme: hsl(325, 75%, 25%);
+		--color-accent: hsl(300, 60%, 25%);
+		--color-contrast: hsl(325, 60%, 94%);
 		--color-text: hsl(325, 10%, 80%);
 		--color-text-over: hsl(325, 10%, 95%);
-		--color-shadow: hsla(300, 10%, 25%, 30%);
+		--color-shadow: hsla(300, 10%, 10%, 30%);
 		--color-mono: hsl(300, 10%, 70%);
 	}
 
 	.red {
-		--color-theme: hsl(345, 10%, 30%);
-		--color-accent: hsl(325, 50%, 75%);
-		--color-contrast: hsl(340, 90%, 92%);
-		--color-background: hsl(345, 5%, 10%);
+		--color-background: hsl(345, 25%, 10%);
+		--color-theme: hsl(345, 75%, 25%);
+		--color-accent: hsl(325, 60%, 25%);
+		--color-contrast: hsl(340, 90%, 94%);
 		--color-text: hsl(345, 10%, 80%);
 		--color-text-over: hsl(345, 10%, 95%);
-		--color-shadow: hsla(325, 10%, 30%, 30%);
+		--color-shadow: hsla(325, 10%, 10%, 30%);
 		--color-mono: hsl(325, 10%, 70%);
 	}
 
 	.grey {
-		--color-theme: hsl(250, 5%, 30%);
-		--color-accent: hsl(230, 50%, 75%);
-		--color-contrast: hsl(250, 5%, 92%);
-		--color-background: hsl(250, 5%, 10%);
+		--color-background: hsl(250, 25%, 10%);
+		--color-theme: hsl(250, 10%, 25%);
+		--color-accent: hsl(230, 10%, 25%);
+		--color-contrast: hsl(250, 5%, 94%);
 		--color-text: hsl(250, 10%, 80%);
 		--color-text-over: hsl(250, 10%, 95%);
-		--color-shadow: hsla(230, 10%, 25%, 30%);
+		--color-shadow: hsla(230, 10%, 10%, 30%);
 		--color-mono: hsl(230, 10%, 70%);
 	}
 
 	.taupe {
-		--color-theme: hsl(280, 5%, 30%);
-		--color-accent: hsl(260, 50%, 75%);
-		--color-contrast: hsl(280, 5%, 92%);
-		--color-background: hsl(280, 5%, 10%);
+		--color-background: hsl(280, 25%, 10%);
+		--color-theme: hsl(280, 25%, 25%);
+		--color-accent: hsl(260, 25%, 25%);
+		--color-contrast: hsl(280, 5%, 94%);
 		--color-text: hsl(280, 10%, 80%);
 		--color-text-over: hsl(280, 10%, 95%);
-		--color-shadow: hsla(260, 10%, 20%, 30%);
+		--color-shadow: hsla(260, 10%, 10%, 30%);
 		--color-mono: hsl(260, 10%, 70%);
 	}
 
 	.black {
-		--color-theme: hsl(280, 0%, 30%);
-		--color-accent: hsl(260, 0%, 75%);
-		--color-contrast: hsl(280, 0%, 92%);
 		--color-background: hsl(280, 0%, 10%);
+		--color-theme: hsl(280, 0%, 25%);
+		--color-accent: hsl(260, 0%, 20%);
+		--color-contrast: hsl(280, 0%, 94%);
 		--color-text: hsl(280, 0%, 80%);
 		--color-text-over: hsl(280, 0%, 95%);
 		--color-shadow: hsla(260, 0%, 5%, 30%);
@@ -581,6 +581,8 @@ body {
 a {
 	color: inherit;
 	text-decoration: none;
+	-webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
 }
 
 a:focus,
@@ -699,10 +701,13 @@ ul + p {
 	display: flex;
 		align-items: end;
 	height: 100%;
+	width: 100%;
 }
 
 .site-header:has(a:hover) {
 	background: var(--color-accent);
+	-webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
 }
 
 .site-header h1 {
@@ -729,6 +734,7 @@ ul + p {
 .site-footer a:hover {
 	background: var(--color-text-over);
 	color: var(--color-theme);
+	text-decoration: none;
 }
 
 .site-footer nav {
@@ -848,10 +854,6 @@ ul + p {
 ************
 ***********/
 
-.archive {
-
-}
-
 @media screen and (min-width: 768px) {
 	.archive header {
 		grid-column: 1;
@@ -880,6 +882,20 @@ ul + p {
 	margin: 0 0 2.369em 0;
 }
 
+.single .cover-small {
+	display: none;
+}
+
+@media screen and (min-width: 768px) {
+	.single .cover-small {
+		display: initial;
+	}
+
+	.single .cover-big {
+		display: none;
+	}
+}
+
 .single header h1 {
 	font-size: 2.369em;
 }
@@ -888,6 +904,12 @@ ul + p {
 	text-decoration: underline;
 		 text-decoration-color: var(--color-accent);
 		 text-decoration-style: dotted;
+}
+
+@media (prefers-color-scheme: dark) {
+	.single a {
+		text-decoration-color: var(--color-contrast);
+	}
 }
 
 .single figcaption {
@@ -919,11 +941,11 @@ ul + p {
 
 .single main .rssonly {
 	background: var(--color-contrast);
-    border: .1em solid var(--color-accent);
+    border: 1px solid var(--color-accent);
     border-radius: 0.422em;
     font-family: var(--font-sans);
-    margin: 0 0 1em;
-    padding: 1em;
+    margin: 0 0 1em 0;
+    padding: 0.563em 0.75em 0.563em 0.75em;
     text-align:center
 }
 
@@ -944,7 +966,7 @@ ul + p {
 }
 
 .single main blockquote {
-	border-left: .5em solid var(--color-theme);
+	border-left: .5em solid var(--color-accent);
 	font-style: italic;
 	padding: 0 0 0 1em;
 }
@@ -1004,8 +1026,8 @@ ul + p {
 
 .single main table {
 	font-variant-numeric: tabular-nums;
-	border-top: .25em solid var(--color-accent);
-	border-bottom: .25em solid var(--color-accent);
+	border-top: 3px solid var(--color-accent);
+	border-bottom: 3px solid var(--color-accent);
 	border-collapse: collapse;
 	margin: 0 0 1em 0;
 	padding: 0;
@@ -1015,16 +1037,16 @@ ul + p {
 
 .single main table thead tr {
 	border-top: none;
-	border-bottom: .1em solid var(--color-accent);
+	border-bottom: 2px solid var(--color-accent);
 }
 
 .single main table th,
 .single main table td {
-	padding: .5em 0;
+	padding: 0.422em 0;
 }
 
 .single main table tr {
-	border-top: .1em solid var(--color-contrast);
+	border-top: 1px solid var(--color-contrast);
 }
 
 /************
@@ -1044,9 +1066,9 @@ ul + p {
 }
 
 .footnote-button {
-    border: 1px solid var(--color-mono);
+    border: 1px solid var(--color-text);
     border-radius: 1em;
-    color: var(--color-mono);
+    color: var(--color-text);
     cursor: pointer;
     display: inline-block;
     font-size: 1rem;
@@ -1083,6 +1105,12 @@ ul + p {
     outline: none;
 }
 
+@media (prefers-color-scheme: dark) {
+	.footnote-button:hover {
+		color: var(--color-background);
+	}
+}
+
 .footnote-button.is-active {
     background: var(--color-accent);
     -webkit-transition-delay: 0.1s;
@@ -1094,11 +1122,11 @@ ul + p {
 }
 
 .bf-footnote {
-    background: var(--color-background);
-    border: 1px solid var(--color-mono);
+    background: var(--color-contrast);
+    border: 1px solid var(--color-text);
     border-radius: 0.422em;
-    box-shadow: 0 0.5em 1em 0 var(--color-shadow);
-    color: var(--color-mono);
+    box-shadow: 0 0.563em 1em 0 var(--color-shadow);
+    color: var(--color-text);
     margin: 1.618em 0;
     max-width: 90vw;
     opacity: 0;
@@ -1114,6 +1142,13 @@ ul + p {
     -webkit-transition-timing-function: ease;
     transition-timing-function: ease;
     z-index: 3;
+}
+
+@media (prefers-color-scheme: dark) {
+	.bf-footnote {
+		background: var(--color-background);
+		color: var(--color-contrast);
+	}
 }
 
 .bf-footnote.footnote-is-active {
@@ -1138,7 +1173,7 @@ ul + p {
 
 .footnote-tooltip {
     background: inherit;
-    border: 1px solid var(--color-mono);
+    border: 1px solid var(--color-text);
     height: 1.333em;
     position: absolute;
     top: -0.317em;
