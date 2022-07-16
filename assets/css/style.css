@@ -692,9 +692,8 @@ ul + p {
 	color: var(--color-text-over);
 	display: flex;
 		align-items: end;
-	/* font-size: 1em; */
-	font-size: 1.175em;
-	width: max-content;
+	font-size: 1em;
+	width: min-content;
 }
 
 .site-header a {
@@ -710,6 +709,8 @@ ul + p {
 
 .site-header h1 {
 	padding: 1rem 1.6rem 1rem 1.6rem;
+	text-align: center;
+	width: 100%;
 }
 
 .single aside {
