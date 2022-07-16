@@ -1,4 +1,4 @@
-{{ if $hero := .Resources.GetMatch "*.jpg" }}
+{{ if $hero := .Resources.GetMatch "hero.jpg" }}
 	{{ $default := $hero.Resize "800x" }}
 	{{ $small := $hero.Resize "600x webp" }}
 	{{ $medium := $hero.Resize "800x webp" }}
@@ -24,4 +24,40 @@
 		</picture>
 		{{ if $hero := .Resources.GetMatch "hero.jpg" }}<figcaption>{{ if .Params.Credits }}{{ .Params.Credits | safeHTML }}{{ else }}{{ T "image" }} {{ .Site.Params.Author.Name }}{{ end }}.</figcaption>{{ end }}
 	</figure>
+{{ end }}
+
+{{ if $cover := .Resources.GetMatch "cover.jpg" }}
+<aside aria-hidden="true" class="cover-big">
+	{{ $default := $cover.Resize "500x" }}
+	{{ $xsmall := $cover.Resize "250x webp" }}
+	{{ $small := $cover.Resize "500x webp" }}
+	
+	<picture>
+		<source srcset="{{ $xsmall.RelPermalink }} 1x, {{ $small.RelPermalink }} 2x" type="image/webp" />
+		<img
+			alt='{{ T "cover" }} {{ .Title }}'
+			decoding="async"
+			loading="lazy"
+			src="{{ $default.RelPermalink }}"
+			width="{{ $default.Width }}" />
+	</picture>
+</aside>
+{{ end }}
+
+{{ if $swatch := .Resources.GetMatch "swatch.jpg" }}
+<aside aria-hidden="true" class="cover-big">
+	{{ $default := $swatch.Resize "500x" }}
+	{{ $xsmall := $swatch.Resize "250x webp" }}
+	{{ $small := $swatch.Resize "500x webp" }}
+	
+	<picture>
+		<source srcset="{{ $xsmall.RelPermalink }} 1x, {{ $small.RelPermalink }} 2x" type="image/webp" />
+		<img
+			alt='{{ T "swatch" }} {{ .Title }}'
+			decoding="async"
+			loading="lazy"
+			src="{{ $default.RelPermalink }}"
+			width="{{ $default.Width }}" />
+	</picture>
+</aside>
 {{ end }}

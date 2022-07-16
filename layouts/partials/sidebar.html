@@ -1,6 +1,6 @@
 <!-- Hero images -->
 {{ if $cover := .Resources.GetMatch "cover.jpg" }}
-<section aria-hidden="true">
+<aside aria-hidden="true" class="cover-small">
 	{{ $default := $cover.Resize "500x" }}
 	{{ $xsmall := $cover.Resize "250x webp" }}
 	{{ $small := $cover.Resize "500x webp" }}
@@ -18,7 +18,7 @@
 {{ end }}
 
 {{ if $swatch := .Resources.GetMatch "swatch.jpg" }}
-<section aria-hidden="true">
+<aside aria-hidden="true" class="cover-small">
 	{{ $default := $swatch.Resize "500x" }}
 	{{ $xsmall := $swatch.Resize "250x webp" }}
 	{{ $small := $swatch.Resize "500x webp" }}
