@@ -494,7 +494,7 @@
 	body {
 		--color-background: lch(95% 10 var(--hue)) !important;
 		--color-theme: lch(30% 60 var(--hue)) !important;
-		--color-accent: lch(30% 80 calc(var(--hue) + 10)) !important;
+		--color-accent: lch(30% 60 calc(var(--hue) + 10)) !important;
 		--color-contrast: lch(90% 15 calc(var(--hue) + 10)) !important;
 		--color-text: lch(5% 15 var(--hue)) !important;
 		--color-text-over: var(--color-background) !important;
