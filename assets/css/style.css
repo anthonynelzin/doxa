@@ -193,14 +193,14 @@
 }
 
 .purple {
-	--color-background: hsl(280, 100%, 96%);
-	--color-theme: hsl(280, 55%, 30%);
-	--color-accent: hsl(300, 65%, 30%);
-	--color-contrast: hsl(280, 55%, 90%);
-	--color-text: hsl(280, 100%, 5%);
+	--color-background: hsl(280, 100%, 96%); /* lch(95% 5 315) */
+	--color-theme: hsl(280, 55%, 30%); /* lch(25% 50 315) */
+	--color-accent: hsl(300, 65%, 30%); /* lch(25% 50 335) */
+	--color-contrast: hsl(280, 55%, 90%); /* lch(90% 15 315) */
+	--color-text: hsl(280, 100%, 5%); /* lch(5% 15 315) */
 	--color-text-over: var(--color-background);
-	--color-shadow: hsla(260, 10%, 0%, 30%);
-	--color-mono: hsl(260, 10%, 30%);
+	--color-shadow: hsla(260, 10%, 0%, 30%); /* lch(5% 25 315 / 50%) */
+	--color-mono: hsl(260, 10%, 30%); /* lch(25% 5 315) */
 }
 
 .lilac {
@@ -490,6 +490,108 @@
 	}
 }
 
+@supports (background-color: lch(30% 60 315)) {
+	body {
+		--color-background: lch(95% 10 var(--hue)) !important;
+		--color-theme: lch(30% 60 var(--hue)) !important;
+		--color-accent: lch(30% 80 calc(var(--hue) + 10)) !important;
+		--color-contrast: lch(90% 15 calc(var(--hue) + 10)) !important;
+		--color-text: lch(5% 15 var(--hue)) !important;
+		--color-text-over: var(--color-background) !important;
+		--color-shadow: lch(5% 25 var(--hue) / 50%) !important;
+		--color-mono: lch(45% 5 var(--hue)) !important;
+	}
+	
+	@media (prefers-color-scheme: dark) {
+		body {
+			--color-background: lch(10% 10 var(--hue)) !important;
+			--color-theme: lch(30% 30 var(--hue)) !important;
+			--color-accent: lch(30% 30 calc(var(--hue) + 10)) !important;
+			--color-contrast: lch(85% 15 calc(var(--hue) + 10)) !important;
+			--color-text: lch(75% 10 var(--hue)) !important;
+			--color-text-over: lch(80% 10 var(--hue)) !important;
+			--color-shadow: lch(0% 10 var(--hue) / 50%) !important;
+			--color-mono: lch(70% 5 var(--hue)) !important;
+		}
+	}
+	
+	.purple {
+		--hue: 315;
+	}
+	
+	.zinzolin {
+		--hue: 335;
+	}
+	
+	.garnet {
+		--hue: 355;
+	}
+	
+	.tomato {
+		--hue: 15;
+	}
+	
+	.sienna {
+		--hue: 35;
+	}
+	
+	.brown {
+		--hue: 55;
+	}
+	
+	.khaki {
+		--hue: 75;
+	}
+	
+	.olive {
+		--hue: 95;
+	}
+	
+	.sage {
+		--hue: 105;
+	}
+	
+	.lichen {
+		--hue: 125;
+	}
+	
+	.jungle {
+		--hue: 145;
+	}
+	
+	.green {
+		--hue: 165;
+	}
+	
+	.forest {
+		--hue: 185;
+	}
+	
+	.turquoise {
+		--hue: 205;
+	}
+	
+	.petrol {
+		--hue: 225;
+	}
+	
+	.cerulean {
+		--hue: 245;
+	}
+	
+	.blue {
+		--hue: 265;
+	}
+	
+	.indigo {
+		--hue: 285;
+	}
+	
+	.violet {
+		--hue: 305;
+	}
+}
+
 *, *:before, *:after {
 	box-sizing: border-box;
 }
@@ -591,14 +693,6 @@ a:hover {
 	color: var(--color-text-over);
 }
 
-@media (prefers-color-scheme: dark) {
-	a:focus,
-	a:hover {
-		background: var(--color-text);
-		color: var(--color-background);
-	}
-}
-
 aside {
 	font-size: 0.75em;
 	margin: 0 0 1em 0;
@@ -629,12 +723,11 @@ button.active {
 
 @media (prefers-color-scheme: dark) {
 	button:hover{
-		background-color: var(--color-text);
 		color: var(--color-background);
 	}
 	
 	button.active {
-		background-color: var(--color-contrast);
+		background-color: var(--color-text);
 	}
 }
 
