@@ -43,7 +43,18 @@
 		</header>
 		
 		<section class="filters">
-			<aside open class="filter">
+			<aside class="filter">
+				<h2>{{ T "by_category" }}</h2>
+			
+				<button data-multifilter="biblio">📘&nbsp;Biblio</button>
+				<button data-multifilter="bistro">☕️&nbsp;Bistro</button>
+				<button data-multifilter="blog">👾&nbsp;Blog</button>
+				<button data-multifilter="memo">📝&nbsp;Mémo</button>
+				<button data-multifilter="photo">📷&nbsp;Photo</button>
+				<button data-multifilter="stylo">🖋&nbsp;Stylo</button>
+			</aside>
+			
+			<aside class="filter">
 				<h2>{{ T "by_year" }}</h2>
 
 				{{ range $pages.GroupByDate "2006" }}
