@@ -331,13 +331,11 @@ body {
 a {
 	color: inherit;
 	text-decoration: none;
-	-webkit-transition: all 0.25s ease-in;
-    transition: all 0.25s ease-in;
 }
 
 a:focus,
 a:hover {
-	background: var(--color-accent);
+	background: linear-gradient(180deg, var(--color-accent), var(--color-theme) 66%);
 	color: var(--color-text-over);
 }
 
@@ -444,7 +442,7 @@ ul {
 **************/
 
 .site-header {
-	background: var(--color-theme);
+	background: linear-gradient(180deg, var(--color-accent), var(--color-theme) 66%);
 	color: var(--color-text-over);
 	display: flex;
 		align-items: end;
@@ -453,6 +451,7 @@ ul {
 }
 
 .site-header a {
+	background: none;
 	display: flex;
 		align-items: end;
 	height: 100%;
@@ -460,9 +459,7 @@ ul {
 }
 
 .site-header:has(a:hover) {
-	background: var(--color-accent);
-	-webkit-transition: all 0.25s ease-in;
-    transition: all 0.25s ease-in;
+	background: linear-gradient(180deg, var(--color-accent), var(--color-accent));
 }
 
 .site-header h1 {
@@ -470,7 +467,7 @@ ul {
 }
 
 .site-footer {
-	background: var(--color-theme);
+	background: linear-gradient(180deg, var(--color-theme), var(--color-accent) 66%);
 	color: var(--color-text-over);
 	font-family: var(--font-sans);
 	font-size: 0.75em;
@@ -837,10 +834,6 @@ ul {
     margin: 0 0 0 0.25em;
     padding: 0;
     position: relative;
-    -webkit-transition-duration: 0.25s;
-    transition-duration: 0.25s;
-    -webkit-transition-property: background;
-    transition-property: background;
     vertical-align: middle;
     width: 1em;
     z-index: 1;
