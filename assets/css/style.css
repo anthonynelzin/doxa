@@ -502,6 +502,28 @@
 		--color-mono: lch(45% 5 var(--hue)) !important;
 	}
 	
+	.grey {
+		--color-background: lch(95% 5 315) !important;
+		--color-theme: lch(20% 20 315) !important;
+		--color-accent: lch(20% 20 325) !important;
+		--color-contrast: lch(90% 15 325) !important;
+		--color-text: lch(5% 15 315) !important;
+		--color-text-over: var(--color-background) !important;
+		--color-shadow: lch(5% 25 315 / 50%) !important;
+		--color-mono: lch(45% 5 315) !important;
+	}
+	
+	.black {
+		--color-background: lch(95% 0 315) !important;
+		--color-theme: lch(10% 0 315) !important;
+		--color-accent: lch(0% 0 325) !important;
+		--color-contrast: lch(90% 0 325) !important;
+		--color-text: lch(5% 0 315) !important;
+		--color-text-over: var(--color-background) !important;
+		--color-shadow: lch(5% 0 315 / 50%) !important;
+		--color-mono: lch(45% 0 315) !important;
+	}
+	
 	@media (prefers-color-scheme: dark) {
 		body {
 			--color-background: lch(10% 10 var(--hue)) !important;
@@ -512,6 +534,28 @@
 			--color-text-over: lch(80% 10 var(--hue)) !important;
 			--color-shadow: lch(0% 10 var(--hue) / 50%) !important;
 			--color-mono: lch(70% 5 var(--hue)) !important;
+		}
+		
+		.grey {
+			--color-background: lch(10% 5 315) !important;
+			--color-theme: lch(20% 10 315) !important;
+			--color-accent: lch(20% 10 325) !important;
+			--color-contrast: lch(85% 15 325) !important;
+			--color-text: lch(75% 10 315) !important;
+			--color-text-over: lch(80% 10 315) !important;
+			--color-shadow: lch(0% 25 315 / 50%) !important;
+			--color-mono: lch(70% 5 315) !important;
+		}
+		
+		.black {
+			--color-background: lch(5% 0 315) !important;
+			--color-theme: lch(30% 0 315) !important;
+			--color-accent: lch(20% 0 325) !important;
+			--color-contrast: lch(85% 0 325) !important;
+			--color-text: lch(75% 0 315) !important;
+			--color-text-over: lch(80% 0 315) !important;
+			--color-shadow: lch(0% 0 315 / 50%) !important;
+			--color-mono: lch(70% 0 315) !important;
 		}
 	}
 	
