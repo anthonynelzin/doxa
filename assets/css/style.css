@@ -464,6 +464,7 @@ ul {
 
 .site-header h1 {
 	padding: 1rem 1.333rem 1rem 1.333rem;
+	white-space: nowrap; /* I love Firefox */
 }
 
 .site-footer {
