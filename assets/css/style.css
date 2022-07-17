@@ -60,213 +60,15 @@
 ***********
 **********/
 
-.tomato {
-	--color-background: hsl(0, 90%, 96%);
-	--color-theme: hsl(0, 90%, 60%);
-	--color-accent: hsl(350, 80%, 60%);
-	--color-contrast: hsl(0, 90%, 94%);
-	--color-text: hsl(0, 90%, 5%);
-	--color-text-over: var(--color-text);
-	--color-shadow: hsla(350, 10%, 30%, 30%);
-	--color-mono: hsl(350, 10%, 35%);
-}
-
-.orange {
-	--color-background: hsl(20, 90%, 96%);
-	--color-theme: hsl(20, 90%, 60%);
-	--color-accent: hsl(0, 80%, 60%);
-	--color-contrast: hsl(20, 90%, 94%);
-	--color-text: hsl(20, 90%, 5%);
-	--color-text-over: var(--color-text);
-	--color-shadow: hsla(0, 10%, 30%, 30%);
-	--color-mono: hsl(0, 10%, 35%);
-}
-
-.brown {
-	--color-background: hsl(30, 90%, 96%);
-	--color-theme: hsl(30, 40%, 50%);
-	--color-accent: hsl(20, 80%, 60%);
-	--color-contrast: hsl(30, 90%, 94%);
-	--color-text: hsl(30, 90%, 5%);
-	--color-text-over: var(--color-text);
-	--color-shadow: hsla(20, 10%, 25%, 30%);
-	--color-mono: hsl(20, 10%, 30%);
-}
-
-.yellow {
-	--color-background: hsl(40, 100%, 96%);
-	--color-theme: hsl(40, 100%, 60%);
-	--color-accent: hsl(30, 80%, 60%);
-	--color-contrast: hsl(40, 100%, 90%);
-	--color-text: hsl(40, 100%, 5%);
-	--color-text-over: var(--color-text);
-	--color-shadow: hsla(30, 10%, 30%, 30%);
-	--color-mono: hsl(30, 10%, 35%);
-}
-
-.lime {
-	--color-background: hsl(70, 100%, 96%);
-	--color-theme: hsl(70, 75%, 60%);
-	--color-accent: hsl(100, 60%, 60%);
-	--color-contrast: hsl(70, 75%, 90%);
-	--color-text: hsl(70, 100%, 5%);
-	--color-text-over: var(--color-text);
-	--color-shadow: hsla(100, 10%, 30%, 30%);
-	--color-mono: hsl(100, 10%, 35%);
-}
-
-.green {
-	--color-background: hsl(100, 100%, 96%);
-	--color-theme: hsl(100, 50%, 60%);
-	--color-accent: hsl(130, 40%, 60%);
-	--color-contrast: hsl(100, 60%, 90%);
-	--color-text: hsl(100, 100%, 5%);
-	--color-text-over: var(--color-text);
-	--color-shadow: hsla(130, 10%, 25%, 30%);
-	--color-mono: hsl(130, 10%, 30%);
-}
-
-.sage {
-	--color-background: hsl(130, 100%, 96%);
-	--color-theme: hsl(130, 20%, 60%);
-	--color-accent: hsl(160, 10%, 60%);
-	--color-contrast: hsl(130, 60%, 90%);
-	--color-text: hsl(130, 100%, 5%);
-	--color-text-over: var(--color-text);
-	--color-shadow: hsla(160, 10%, 25%, 30%);
-	--color-mono: hsl(160, 10%, 30%);
-}
-
-.turquoise {
-	--color-background: hsl(160, 100%, 96%);
-	--color-theme: hsl(160, 60%, 45%);
-	--color-accent: hsl(130, 30%, 60%);
-	--color-contrast: hsl(160, 60%, 90%);
-	--color-text: hsl(160, 100%, 5%);
-	--color-text-over: var(--color-text);
-	--color-shadow: hsla(130, 10%, 25%, 30%);
-	--color-mono: hsl(130, 10%, 30%);
-}
-
-.cyan {
-	--color-background: hsl(190, 100%, 96%);
-	--color-theme: hsl(190, 60%, 60%);
-	--color-accent: hsl(210, 40%, 65%);
-	--color-contrast: hsl(190, 50%, 90%);
-	--color-text: hsl(190, 100%, 5%);
-	--color-text-over: var(--color-text);
-	--color-shadow: hsla(210, 10%, 25%, 30%);
-	--color-mono: hsl(210, 10%, 30%);
-}
-
-.blue {
-	--color-background: hsl(210, 100%, 96%);
-	--color-theme: hsl(210, 75%, 70%);
-	--color-accent: hsl(230, 65%, 75%);
-	--color-contrast: hsl(210, 75%, 90%);
-	--color-text: hsl(210, 100%, 5%);
-	--color-text-over: var(--color-text);
-	--color-shadow: hsla(230, 10%, 25%, 30%);
-	--color-mono: hsl(230, 10%, 30%);
-}
-
-.indigo {
-	--color-background: hsl(230, 100%, 96%);
-	--color-theme: hsl(230, 50%, 40%);
-	--color-accent: hsl(260, 40%, 40%);
-	--color-contrast: hsl(230, 50%, 90%);
-	--color-text: hsl(230, 100%, 5%);
+body {
+	--color-background: rgb(97.97% 92.69% 99.81%);
+	--color-theme: rgb(41.69% 15.35% 54.2%);
+	--color-accent: rgb(47.42% 10.11% 49.27%);
+	--color-contrast: rgb(95.86% 85.78% 95.39%);
+	--color-text: rgb(10.5% 4.09% 12.41%);
 	--color-text-over: var(--color-background);
-	--color-shadow: hsla(230, 40%, 25%, 30%);
-	--color-mono: hsl(230, 10%, 30%);
-}
-
-.violet {
-	--color-background: hsl(260, 100%, 96%);
-	--color-theme: hsl(260, 55%, 75%);
-	--color-accent: hsl(280, 65%, 75%);
-	--color-contrast: hsl(260, 55%, 90%);
-	--color-text: hsl(260, 100%, 5%);
-	--color-text-over: var(--color-text);
-	--color-shadow: hsla(280, 10%, 25%, 30%);
-	--color-mono: hsl(280, 10%, 30%);
-}
-
-.purple {
-	--color-background: hsl(280, 100%, 96%); /* lch(95% 5 315) */
-	--color-theme: hsl(280, 55%, 30%); /* lch(25% 50 315) */
-	--color-accent: hsl(300, 65%, 30%); /* lch(25% 50 335) */
-	--color-contrast: hsl(280, 55%, 90%); /* lch(90% 15 315) */
-	--color-text: hsl(280, 100%, 5%); /* lch(5% 15 315) */
-	--color-text-over: var(--color-background);
-	--color-shadow: hsla(260, 10%, 0%, 30%); /* lch(5% 25 315 / 50%) */
-	--color-mono: hsl(260, 10%, 30%); /* lch(25% 5 315) */
-}
-
-.lilac {
-	--color-background: hsl(300, 100%, 96%);
-	--color-theme: hsl(300, 55%, 30%);
-	--color-accent: hsl(325, 65%, 30%);
-	--color-contrast: hsl(300, 55%, 90%);
-	--color-text: hsl(300, 100%, 5%);
-	--color-text-over: var(--color-background);
-	--color-shadow: hsla(325, 10%, 25%, 30%);
-	--color-mono: hsl(325, 10%, 30%);
-}
-
-.magenta {
-	--color-background: hsl(325, 100%, 96%);
-	--color-theme: hsl(325, 60%, 35%);
-	--color-accent: hsl(345, 70%, 35%);
-	--color-contrast: hsl(325, 60%, 90%);
-	--color-text: hsl(325, 100%, 5%);
-	--color-text-over: var(--color-background);
-	--color-shadow: hsla(345, 10%, 25%, 30%);
-	--color-mono: hsl(345, 10%, 30%);
-}
-
-.red {
-	--color-background: hsl(345, 100%, 96%);
-	--color-theme: hsl(345, 90%, 30%);
-	--color-accent: hsl(0, 100%, 30%);
-	--color-contrast: hsl(340, 90%, 90%);
-	--color-text: hsl(345, 100%, 5%);
-	--color-text-over: var(--color-background);
-	--color-shadow: hsla(0, 10%, 30%, 30%);
-	--color-mono: hsl(0, 10%, 35%);
-}
-
-.grey {
-	--color-background: hsl(230, 100%, 96%);
-	--color-theme: hsl(230, 10%, 25%);
-	--color-accent: hsl(260, 20%, 25%);
-	--color-contrast: hsl(230, 5%, 90%);
-	--color-text: hsl(230, 100%, 5%);
-	--color-text-over: var(--color-background);
-	--color-shadow: hsla(210, 10%, 25%, 30%);
-	--color-mono: hsl(210, 10%, 30%);
-}
-
-.taupe {
-	--color-background: hsl(280, 100%, 96%);
-	--color-theme: hsl(280, 20%, 25%);
-	--color-accent: hsl(300, 20%, 25%);
-	--color-contrast: hsl(280, 5%, 90%);
-	--color-text: hsl(280, 100%, 5%);
-	--color-text-over: var(--color-background);
-	--color-shadow: hsla(260, 10%, 20%, 30%);
-	--color-mono: hsl(260, 10%, 25%);
-}
-
-.black {
-	--color-background: hsl(280, 0%, 96%);
-	--color-theme: hsl(280, 0%, 15%);
-	--color-accent: hsl(300, 0%, 5%);
-	--color-contrast: hsl(280, 0%, 94%);
-	--color-text: hsl(280, 0%, 5%);
-	--color-text-over: var(--color-background);
-	--color-shadow: hsla(260, 0%, 5%, 30%);
-	--color-mono: hsl(260, 0%, 10%);
+	--color-shadow: rgb(12.18% 2.05% 16.05% / 50%);
+	--color-mono: rgb(43.31% 41.03% 44.1%);
 }
 
 ::selection {
@@ -275,213 +77,15 @@
 }
 
 @media (prefers-color-scheme: dark) {
-	.tomato {
-		--color-background: hsl(0, 25%, 10%);
-		--color-theme: hsl(0, 75%, 30%);
-		--color-accent: hsl(350, 60%, 30%);
-		--color-contrast: hsl(0, 90%, 94%);
-		--color-text: hsl(0, 10%, 80%);
-		--color-text-over: hsl(0, 10%, 95%);
-		--color-shadow: hsla(350, 10%, 10%, 30%);
-		--color-mono: hsl(350, 10%, 70%);
-	}
-
-	.orange {
-		--color-background: hsl(20, 25%, 10%);
-		--color-theme: hsl(20, 75%, 30%);
-		--color-accent: hsl(0, 60%, 30%);
-		--color-contrast: hsl(20, 90%, 94%);
-		--color-text: hsl(20, 10%, 80%);
-		--color-text-over: hsl(20, 10%, 95%);
-		--color-shadow: hsla(0, 10%, 10%, 30%);
-		--color-mono: hsl(0, 10%, 70%);
-	}
-
-	.brown {
-		--color-background: hsl(30, 25%, 10%);
-		--color-theme: hsl(30, 75%, 30%);
-		--color-accent: hsl(20, 60%, 30%);
-		--color-contrast: hsl(30, 50%, 94%);
-		--color-text: hsl(30, 10%, 80%);
-		--color-text-over: hsl(30, 10%, 95%);
-		--color-shadow: hsla(20, 10%, 10%, 30%);
-		--color-mono: hsl(20, 10%, 70%);
-	}
-
-	.yellow {
-		--color-background: hsl(40, 25%, 10%);
-		--color-theme: hsl(40, 75%, 30%);
-		--color-accent: hsl(30, 60%, 30%);
-		--color-contrast: hsl(40, 100%, 94%);
-		--color-text: hsl(40, 10%, 80%);
-		--color-text-over: hsl(40, 10%, 95%);
-		--color-shadow: hsla(30, 10%, 10%, 30%);
-		--color-mono: hsl(30, 10%, 70%);
-	}
-
-	.lime {
-		--color-background: hsl(70, 25%, 10%);
-		--color-theme: hsl(70, 75%, 25%);
-		--color-accent: hsl(40, 60%, 25%);
-		--color-contrast: hsl(70, 75%, 94%);
-		--color-text: hsl(70, 10%, 80%);
-		--color-text-over: hsl(70, 10%, 95%);
-		--color-shadow: hsla(40, 10%, 10%, 30%);
-		--color-mono: hsl(40, 10%, 70%);
-	}
-
-	.green {
-		--color-background: hsl(100, 25%, 10%);
-		--color-theme: hsl(100, 75%, 25%);
-		--color-accent: hsl(70, 60%, 25%);
-		--color-contrast: hsl(100, 50%, 94%);
-		--color-text: hsl(100, 10%, 80%);
-		--color-text-over: hsl(100, 10%, 95%);
-		--color-shadow: hsla(70, 10%, 10%, 30%);
-		--color-mono: hsl(70, 10%, 70%);
-	}
-
-	.sage {
-		--color-background: hsl(130, 25%, 10%);
-		--color-theme: hsl(130, 75%, 25%);
-		--color-accent: hsl(100, 60%, 25%);
-		--color-contrast: hsl(130, 20%, 94%);
-		--color-text: hsl(130, 10%, 80%);
-		--color-text-over: hsl(130, 10%, 95%);
-		--color-shadow: hsla(100, 10%, 10%, 30%);
-		--color-mono: hsl(100, 10%, 70%);
-	}
-
-	.turquoise {
-		--color-background: hsl(160, 25%, 10%);
-		--color-theme: hsl(160, 75%, 25%);
-		--color-accent: hsl(130, 60%, 25%);
-		--color-contrast: hsl(160, 60%, 94%);
-		--color-text: hsl(160, 10%, 80%);
-		--color-text-over: hsl(160, 10%, 95%);
-		--color-shadow: hsla(130, 10%, 10%, 30%);
-		--color-mono: hsl(130, 10%, 70%);
-	}
-
-	.cyan {
-		--color-background: hsl(190, 25%, 10%);
-		--color-theme: hsl(190, 75%, 25%);
-		--color-accent: hsl(160, 60%, 25%);
-		--color-contrast: hsl(190, 50%, 94%);
-		--color-text: hsl(190, 10%, 80%);
-		--color-text-over: hsl(190, 10%, 95%);
-		--color-shadow: hsla(160, 10%, 10%, 30%);
-		--color-mono: hsl(160, 10%, 70%);
-	}
-
-	.blue {
-		--color-background: hsl(210, 25%, 10%);
-		--color-theme: hsl(210, 75%, 25%);
-		--color-accent: hsl(190, 60%, 25%);
-		--color-contrast: hsl(210, 75%, 94%);
-		--color-text: hsl(210, 10%, 80%);
-		--color-text-over: hsl(210, 10%, 95%);
-		--color-shadow: hsla(190, 10%, 10%, 30%);
-		--color-mono: hsl(190, 10%, 70%);
-	}
-
-	.indigo {
-		--color-background: hsl(230, 25%, 10%);
-		--color-theme: hsl(230, 75%, 25%);
-		--color-accent: hsl(210, 60%, 25%);
-		--color-contrast: hsl(230, 50%, 94%);
-		--color-text: hsl(230, 10%, 80%);
-		--color-text-over: hsl(230, 10%, 95%);
-		--color-shadow: hsla(210, 10%, 10%, 30%);
-		--color-mono: hsl(210, 10%, 70%);
-	}
-
-	.violet {
-		--color-background: hsl(260, 25%, 10%);
-		--color-theme: hsl(260, 75%, 25%);
-		--color-accent: hsl(230, 60%, 25%);
-		--color-contrast: hsl(260, 55%, 94%);
-		--color-text: hsl(260, 10%, 80%);
-		--color-text-over: hsl(260, 10%, 95%);
-		--color-shadow: hsla(230, 10%, 10%, 30%);
-		--color-mono: hsl(230, 10%, 70%);
-	}
-
-	.purple {
-		--color-background: hsl(280, 25%, 10%);
-		--color-theme: hsl(280, 75%, 25%);
-		--color-accent: hsl(260, 60%, 25%);
-		--color-contrast: hsl(280, 55%, 94%);
-		--color-text: hsl(280, 10%, 80%);
-		--color-text-over: hsl(280, 10%, 95%);
-		--color-shadow: hsla(260, 10%, 10%, 30%);
-		--color-mono: hsl(260, 10%, 70%);
-	}
-
-	.lilac {
-		--color-background: hsl(300, 25%, 10%);
-		--color-theme: hsl(300, 75%, 25%);
-		--color-accent: hsl(280, 60%, 25%);
-		--color-contrast: hsl(300, 55%, 94%);
-		--color-text: hsl(300, 10%, 80%);
-		--color-text-over: hsl(300, 10%, 95%);
-		--color-shadow: hsla(280, 10%, 10%, 30%);
-		--color-mono: hsl(280, 10%, 70%);
-	}
-
-	.magenta {
-		--color-background: hsl(325, 25%, 10%);
-		--color-theme: hsl(325, 75%, 25%);
-		--color-accent: hsl(300, 60%, 25%);
-		--color-contrast: hsl(325, 60%, 94%);
-		--color-text: hsl(325, 10%, 80%);
-		--color-text-over: hsl(325, 10%, 95%);
-		--color-shadow: hsla(300, 10%, 10%, 30%);
-		--color-mono: hsl(300, 10%, 70%);
-	}
-
-	.red {
-		--color-background: hsl(345, 25%, 10%);
-		--color-theme: hsl(345, 75%, 25%);
-		--color-accent: hsl(325, 60%, 25%);
-		--color-contrast: hsl(340, 90%, 94%);
-		--color-text: hsl(345, 10%, 80%);
-		--color-text-over: hsl(345, 10%, 95%);
-		--color-shadow: hsla(325, 10%, 10%, 30%);
-		--color-mono: hsl(325, 10%, 70%);
-	}
-
-	.grey {
-		--color-background: hsl(250, 25%, 10%);
-		--color-theme: hsl(250, 10%, 25%);
-		--color-accent: hsl(230, 10%, 25%);
-		--color-contrast: hsl(250, 5%, 94%);
-		--color-text: hsl(250, 10%, 80%);
-		--color-text-over: hsl(250, 10%, 95%);
-		--color-shadow: hsla(230, 10%, 10%, 30%);
-		--color-mono: hsl(230, 10%, 70%);
-	}
-
-	.taupe {
-		--color-background: hsl(280, 25%, 10%);
-		--color-theme: hsl(280, 25%, 25%);
-		--color-accent: hsl(260, 25%, 25%);
-		--color-contrast: hsl(280, 5%, 94%);
-		--color-text: hsl(280, 10%, 80%);
-		--color-text-over: hsl(280, 10%, 95%);
-		--color-shadow: hsla(260, 10%, 10%, 30%);
-		--color-mono: hsl(260, 10%, 70%);
-	}
-
-	.black {
-		--color-background: hsl(280, 0%, 10%);
-		--color-theme: hsl(280, 0%, 25%);
-		--color-accent: hsl(260, 0%, 20%);
-		--color-contrast: hsl(280, 0%, 94%);
-		--color-text: hsl(280, 0%, 80%);
-		--color-text-over: hsl(280, 0%, 95%);
-		--color-shadow: hsla(260, 0%, 5%, 30%);
-		--color-mono: hsl(260, 0%, 70%);
+	body {
+		--color-background: rgb(13.14% 9.52% 14.56%);
+		--color-theme: rgb(35.48% 22.98% 40.84%);
+		--color-accent: rgb(38.29% 21.81% 38.44%);
+		--color-contrast: rgb(90.24% 80.28% 89.79%);
+		--color-text: rgb(75.83% 70.81% 77.59%);
+		--color-text-over: rgb(81.26% 76.17% 83.05%);
+		--color-shadow: rgb(0% 0% 0% / 50%);
+		--color-mono: rgb(68.79% 66.31% 69.64%);
 	}
 	
 	::selection {
@@ -492,70 +96,70 @@
 
 @supports (background-color: lch(30% 60 315)) {
 	body {
-		--color-background: lch(95% 10 var(--hue)) !important;
-		--color-theme: lch(30% 60 var(--hue)) !important;
-		--color-accent: lch(30% 60 calc(var(--hue) + 10)) !important;
-		--color-contrast: lch(90% 15 calc(var(--hue) + 10)) !important;
-		--color-text: lch(5% 15 var(--hue)) !important;
-		--color-text-over: var(--color-background) !important;
-		--color-shadow: lch(5% 25 var(--hue) / 50%) !important;
-		--color-mono: lch(45% 5 var(--hue)) !important;
+		--color-background: lch(95% 10 var(--hue));
+		--color-theme: lch(30% 60 var(--hue));
+		--color-accent: lch(30% 60 calc(var(--hue) + 10));
+		--color-contrast: lch(90% 15 calc(var(--hue) + 10));
+		--color-text: lch(5% 15 var(--hue));
+		--color-text-over: var(--color-background);
+		--color-shadow: lch(5% 25 var(--hue) / 50%);
+		--color-mono: lch(45% 5 var(--hue));
 	}
 	
 	.grey {
-		--color-background: lch(95% 5 315) !important;
-		--color-theme: lch(20% 20 315) !important;
-		--color-accent: lch(20% 20 325) !important;
-		--color-contrast: lch(90% 15 325) !important;
-		--color-text: lch(5% 15 315) !important;
-		--color-text-over: var(--color-background) !important;
-		--color-shadow: lch(5% 25 315 / 50%) !important;
-		--color-mono: lch(45% 5 315) !important;
+		--color-background: lch(95% 5 315);
+		--color-theme: lch(20% 20 315);
+		--color-accent: lch(20% 20 325);
+		--color-contrast: lch(90% 15 325);
+		--color-text: lch(5% 15 315);
+		--color-text-over: var(--color-background);
+		--color-shadow: lch(5% 25 315 / 50%);
+		--color-mono: lch(45% 5 315);
 	}
 	
 	.black {
-		--color-background: lch(95% 0 315) !important;
-		--color-theme: lch(10% 0 315) !important;
-		--color-accent: lch(0% 0 325) !important;
-		--color-contrast: lch(90% 0 325) !important;
-		--color-text: lch(5% 0 315) !important;
-		--color-text-over: var(--color-background) !important;
-		--color-shadow: lch(5% 0 315 / 50%) !important;
-		--color-mono: lch(45% 0 315) !important;
+		--color-background: lch(95% 0 315);
+		--color-theme: lch(10% 0 315);
+		--color-accent: lch(0% 0 325);
+		--color-contrast: lch(90% 0 325);
+		--color-text: lch(5% 0 315);
+		--color-text-over: var(--color-background);
+		--color-shadow: lch(5% 0 315 / 50%);
+		--color-mono: lch(45% 0 315);
 	}
 	
 	@media (prefers-color-scheme: dark) {
 		body {
-			--color-background: lch(10% 10 var(--hue)) !important;
-			--color-theme: lch(30% 30 var(--hue)) !important;
-			--color-accent: lch(30% 30 calc(var(--hue) + 10)) !important;
-			--color-contrast: lch(85% 15 calc(var(--hue) + 10)) !important;
-			--color-text: lch(75% 10 var(--hue)) !important;
-			--color-text-over: lch(80% 10 var(--hue)) !important;
-			--color-shadow: lch(0% 10 var(--hue) / 50%) !important;
-			--color-mono: lch(70% 5 var(--hue)) !important;
+			--color-background: lch(10% 10 var(--hue));
+			--color-theme: lch(30% 30 var(--hue));
+			--color-accent: lch(30% 30 calc(var(--hue) + 10));
+			--color-contrast: lch(85% 15 calc(var(--hue) + 10));
+			--color-text: lch(75% 10 var(--hue));
+			--color-text-over: lch(80% 10 var(--hue));
+			--color-shadow: lch(0% 10 var(--hue) / 50%);
+			--color-mono: lch(70% 5 var(--hue));
 		}
 		
 		.grey {
-			--color-background: lch(10% 5 315) !important;
-			--color-theme: lch(20% 10 315) !important;
-			--color-accent: lch(20% 10 325) !important;
-			--color-contrast: lch(85% 15 325) !important;
-			--color-text: lch(75% 10 315) !important;
-			--color-text-over: lch(80% 10 315) !important;
-			--color-shadow: lch(0% 25 315 / 50%) !important;
-			--color-mono: lch(70% 5 315) !important;
+			--color-background: lch(10% 5 315);
+			--color-theme: lch(20% 10 315);
+			--color-accent: lch(20% 10 325);
+			--color-contrast: lch(85% 15 325);
+			--color-text: lch(75% 10 315);
+			--color-text-over: lch(80% 10 315);
+			--color-shadow: lch(0% 25 315 / 50%);
+			--color-mono: lch(70% 5 315);
 		}
 		
 		.black {
-			--color-background: lch(5% 0 315) !important;
-			--color-theme: lch(30% 0 315) !important;
-			--color-accent: lch(20% 0 325) !important;
-			--color-contrast: lch(85% 0 325) !important;
-			--color-text: lch(75% 0 315) !important;
-			--color-text-over: lch(80% 0 315) !important;
-			--color-shadow: lch(0% 0 315 / 50%) !important;
-			--color-mono: lch(70% 0 315) !important;
+			--color-background: lch(5% 0 315);
+			--color-theme: lch(30% 0 315);
+			--color-accent: lch(20% 0 325);
+			--color-contrast: lch(85% 0 325);
+			--color-text: lch(75% 0 315);
+			--color-text-over: lch(80% 0 315);
+			--color-shadow: lch(0% 0 315 / 50%);
+			--color-mono: lch(70% 0 315);
 		}
 	}
 	
@@ -636,15 +240,15 @@
 	}
 }
 
-*, *:before, *:after {
-	box-sizing: border-box;
-}
-
 /**********
 ***********
 * General *
 ***********
 **********/
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -831,11 +435,6 @@ hr::before {
 
 ul {
 	list-style: inside square;
-	margin: 0 0 0 0;
-}
-
-ul + p {
-	margin: 1em 0 1em 0 !important;
 }
 
 /**************
@@ -952,7 +551,7 @@ ul + p {
 
 .list .title {
 	padding: 0 0 1em 0;
-	width: 100% !important;
+	width: 100%;
 }
 
 .list .title time {
@@ -1000,7 +599,7 @@ ul + p {
 }
 
 .home .thumbnails .thumbnail a:hover {
-	background: none !important;
+	background: none;
 	opacity: .75;
 }
 
