@@ -581,14 +581,22 @@ body {
 a {
 	color: inherit;
 	text-decoration: none;
-	-webkit-transition: all 0.25s ease;
-    transition: all 0.25s ease;
+	-webkit-transition: all 0.25s ease-in;
+    transition: all 0.25s ease-in;
 }
 
 a:focus,
 a:hover {
 	background: var(--color-accent);
 	color: var(--color-text-over);
+}
+
+@media (prefers-color-scheme: dark) {
+	a:focus,
+	a:hover {
+		background: var(--color-text);
+		color: var(--color-background);
+	}
 }
 
 aside {
@@ -598,9 +606,9 @@ aside {
 
 button {
 	background-color: var(--color-background);
-	border: 1px solid var(--color-accent);
-	border-radius: 0.422em;;
-	color: var(--color-accent);
+	border: 1px solid;
+	border-radius: 0.422em;
+	color: var(--color-text);
 	margin: 0.422em 0 0 0;
 	padding: 0.422em 0.563em 0.422em 0.563em;
 	text-align: center;
@@ -615,8 +623,19 @@ button:hover {
 
 button.active {
 	background-color: var(--color-accent);
+	border: 1px solid var(--color-accent);
 	color: var(--color-background);
-	font-weight: 700;
+}
+
+@media (prefers-color-scheme: dark) {
+	button:hover{
+		background-color: var(--color-text);
+		color: var(--color-background);
+	}
+	
+	button.active {
+		background-color: var(--color-contrast);
+	}
 }
 
 em em,
@@ -706,8 +725,8 @@ ul + p {
 
 .site-header:has(a:hover) {
 	background: var(--color-accent);
-	-webkit-transition: all 0.25s ease;
-    transition: all 0.25s ease;
+	-webkit-transition: all 0.25s ease-in;
+    transition: all 0.25s ease-in;
 }
 
 .site-header h1 {
@@ -912,6 +931,11 @@ ul + p {
 	}
 }
 
+.single a:focus,
+.single a:hover {
+	text-decoration: none;
+}
+
 .single figcaption {
 	color: var(--color-mono);
 	font-size: .75em;
@@ -1026,8 +1050,8 @@ ul + p {
 
 .single main table {
 	font-variant-numeric: tabular-nums;
-	border-top: 3px solid var(--color-accent);
-	border-bottom: 3px solid var(--color-accent);
+	border-top: 3px solid;
+	border-bottom: 3px solid;
 	border-collapse: collapse;
 	margin: 0 0 1em 0;
 	padding: 0;
@@ -1037,7 +1061,7 @@ ul + p {
 
 .single main table thead tr {
 	border-top: none;
-	border-bottom: 2px solid var(--color-accent);
+	border-bottom: 2px solid;
 }
 
 .single main table th,
@@ -1096,19 +1120,13 @@ ul + p {
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    -webkit-transition: color 0.25s ease;
-    transition: color 0.25s ease;
+    -webkit-transition: color 0.25s ease-in;
+    transition: color 0.25s ease-in;
 }
 
 .footnote-button:hover {
     background: var(--color-contrast);
     outline: none;
-}
-
-@media (prefers-color-scheme: dark) {
-	.footnote-button:hover {
-		color: var(--color-background);
-	}
 }
 
 .footnote-button.is-active {
@@ -1119,6 +1137,19 @@ ul + p {
 
 .footnote-button.is-active:after {
     color: var(--color-text-over);
+}
+
+@media (prefers-color-scheme: dark) {
+	.footnote-button:hover {
+		background-color: var(--color-text);
+		color: var(--color-background);
+	}
+	
+	.footnote-button.is-active,
+	.footnote-button.is-active:after {
+		background-color: var(--color-contrast);
+		color: var(--color-background);
+	}
 }
 
 .bf-footnote {
@@ -1139,8 +1170,8 @@ ul + p {
     transition-duration: 0.25s;
     -webkit-transition-property: opacity;
     transition-property: opacity;
-    -webkit-transition-timing-function: ease;
-    transition-timing-function: ease;
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
     z-index: 3;
 }
 
