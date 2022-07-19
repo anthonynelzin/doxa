@@ -11,24 +11,11 @@
 *****************************/
 
 @media print {
-	.orange,
-	.yellow,
-	.green,
-	.mint,
-	.cyan,
-	.blue,
-	.indigo,
-	.violet,
-	.purple,
-	.lilac,
-	.red,
-	.grey,
-	.taupe,
-	.black {
-		--color-bg: white;
-		--color-main: white;
-		--color-text: black;
+	body {
+		--color-background: white;
+		--color-theme: black;
 		--color-accent: black;
+		--color-text: black;
 	}
 
 	@page {
@@ -48,8 +35,7 @@
 	}
 	
 	.site-header,
-	.site-footer,
-	.single_sidebar {
+	.site-footer {
 		display: none;
 	}
 	
@@ -58,35 +44,35 @@
 		padding: 0 0 0 0;
 	}
 	
-	.single_content a {
+	.single main a {
 		text-decoration: none;
 		word-wrap: break-word;
 	}
 	
-	.single_content a[href^=http]:before,
-	.single_content a[href^=https]:before {
+	.single main a[href^=http]:before,
+	.single main a[href^=https]:before {
 		color: var(--color-gray);
 		content: "[";
 	}
 	
-	.single_content a[href^=http]:after,
-	.single_content a[href^=https]:after {
+	.single main a[href^=http]:after,
+	.single main a[href^=https]:after {
 		color: var(--color-gray);
 		content: "](" attr(href) ")";
 	}
 	
-	.single_content figure {
+	.single main figure {
 		break-inside: avoid;
 	}
 	
-	.single_content figure iframe {
+	.single main figure iframe {
 		display: none;
 		height: 0;
 		width: 0;	
 	}
 	
-	.single_content h2,
-	.single_content h3 {
+	.single main h2,
+	.single main h3 {
    		break-after: avoid-page;
    	}
 }
