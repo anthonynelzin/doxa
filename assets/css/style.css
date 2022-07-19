@@ -10,50 +10,6 @@
 ******************************
 *****************************/
 
-/********
-*********
-* Fonts *
-*********
-********/
-
-@font-face {
-	font-family: "Archivo";
-	src: url("../fonts/Archivo-Regular.woff2") format("woff2-variations");
-	font-display: swap;
-	font-style: normal;
-	font-weight: 100 900;
-}
-
-@font-face {
-	font-family: "Archivo";
-	src: url("../fonts/Archivo-Italic.woff2") format("woff2-variations");
-	font-display: swap;
-	font-style: italic;
-	font-weight: 100 900;
-}
-
-@font-face {
-	font-family: "Piazzolla";
-	src: url("../fonts/Piazzolla-Regular.woff2") format("woff2-variations");
-	font-display: swap;
-	font-style: normal;
-	font-weight: 100 900;
-}
-
-@font-face {
-	font-family: "Piazzolla";
-	src: url("../fonts/Piazzolla-Italic.woff2") format("woff2-variations");
-	font-display: swap;
-	font-style: italic;
-	font-weight: 100 900;
-}
-
-:root {
-	--font-sans: "Archivo", ui-sans-serif, sans-serif;
-	--font-serif: "Piazzolla", ui-serif, serif;
-	--font-mono: ui-monospace, "Monaco", "Courier New", "Courier", monospace;
-}
-
 /**********
 ***********
 * Colours *
@@ -282,7 +238,6 @@ body {
 		grid-template-rows: [header] 25vh [content] auto [footer] 1fr [end];
 		column-gap: 1.777em;
 		row-gap: 7.418em;
-	font-family: var(--font-serif);
 	font-size: clamp(1.2rem, 3vw, 1.3rem);
 	-webkit-hyphens: auto;
 	-ms-hypens: auto;
@@ -395,8 +350,7 @@ h1,
 h2,
 h3,
 h4 {
-	font-family: var(--font-sans);
-		font-size: 1em;
+	font-size: 1em;
 	line-height: 1;
 	margin: 0 0 0 0;
 	padding: 0 0 0 0;
@@ -470,7 +424,6 @@ ul {
 .site-footer {
 	background: linear-gradient(180deg, var(--color-theme), var(--color-accent) 66%);
 	color: var(--color-text-over);
-	font-family: var(--font-sans);
 	font-size: 0.75em;
 	margin: 0 0 0 auto;
 	padding: 1rem 1.333rem 1rem 1.333rem;
@@ -735,7 +688,7 @@ ul {
 }
 
 .single main code,
-.single mainpre {
+.single main pre {
 	font-family: var(--font-mono);
 		font-feature-settings: "zero";
 }
