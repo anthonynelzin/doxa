@@ -510,9 +510,21 @@ ul {
 }
 
 @media screen and (min-width: 768px) {
+	.list .title {
+		padding: 0 0 0.333em 0;
+		display: flex;
+			align-items: center;
+			justify-content: space-between;
+		width: 100%;
+	}
+	
 	.list .title h2 {
 		overflow: hidden;
 		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	
+	.list .title time {
 		white-space: nowrap;
 	}
 }
