@@ -296,7 +296,6 @@ a:hover {
 
 aside {
 	font-size: 0.75em;
-	margin: 0 0 1em 0;
 }
 
 button {
@@ -408,6 +407,17 @@ ul {
 .site-header h1 {
 	padding: 1rem 1.333rem 1rem 1.333rem;
 	white-space: nowrap; /* I love Firefox */
+}
+
+.single section {
+	display: flex;
+		align-content: flex-start;
+		flex-flow: row wrap;
+		gap: 1em .75em;
+}
+
+.single section aside {
+	flex-basis: 20ch;
 }
 
 .site-footer {
@@ -595,7 +605,7 @@ ul {
 
 @media screen and (min-width: 768px) {
 	.single .cover-small {
-		display: initial;
+		display: block;
 	}
 
 	.single .cover-big {
