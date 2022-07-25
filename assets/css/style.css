@@ -577,10 +577,6 @@ ul {
 	}
 }
 
-der h1 {
-	font-size: 2.369em;
-}
-
 .single section aside {
 	flex-basis: 20ch;
 }
@@ -607,6 +603,10 @@ der h1 {
 	font-size: .75em;
 	font-style: italic;
 	text-align: right;
+}
+
+.single h1 {
+	font-size: 2.369em;
 }
 
 .single main .footnotes {
