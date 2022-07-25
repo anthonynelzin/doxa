@@ -235,7 +235,8 @@ body {
 	background-color: var(--color-background);
 	color: var(--color-text);
 	display: grid;
-		grid-template-rows: [header] 25vh [content] auto [footer] 1fr [end];
+		grid-template-columns: [header] 9.969em [sidebar] 1fr [footer] 9.969em [end];
+		grid-template-rows: [header] 25vh [main] auto [footer] 1fr [end];
 		column-gap: 1.777em;
 		row-gap: 7.418em;
 	font-size: clamp(1.2rem, 3vw, 1.3rem);
@@ -250,36 +251,16 @@ body {
 		-ms-hyphenate-limit-zone: 6%;
 		-ms-hyphenate-limit-last: always;
 	line-height: 1.5;
-	margin: 0 1rem;
-		max-width: 62.5rem;
+	margin: 0 1em;
 	padding: 0 0 0 0;
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-size-adjust: 100%;
 }
 
-.content {
-	display: grid;
-		column-gap: 1.777em;
-		row-gap: 1em;
-}
-
-/*  Smaller iPads in portrait */
-@media screen and (min-width: 768px) {
-	.content {
-		grid-template-columns: [header] 15ch [sidebar] 1fr [footer] 20ch [end];
-		row-gap: 2.369em;
-	}
-}
-
-/*  iPad Pro 12,9" in portrait, other devices in landscape */
 @media screen and (min-width: 1024px) {
 	body {
-		grid-template-columns: [header] 20ch [sidebar] 1fr [footer] 20ch [end];
 		margin: 0 auto;
-	}
-	
-	.content {
-		grid-template-columns: [header] 20ch [sidebar] 1fr [footer] 20ch [end];
+		max-width: 62.5rem;
 	}
 }
 
@@ -373,6 +354,13 @@ hr::before {
 	content: "※";
 }
 
+section {
+	display: flex;
+		align-content: flex-start;
+		flex-flow: row wrap;
+		gap: 1em .75em;
+}
+
 ul {
 	list-style: inside square;
 }
@@ -383,51 +371,78 @@ ul {
 ***************
 **************/
 
+.content {
+	display: grid;
+		grid-template-columns: [header] 9.969em [sidebar] minmax(0, 1fr) [end];
+		/* minmax() trick from https://css-tricks.com/preventing-a-grid-blowout/ */
+		column-gap: 1.777em;
+		row-gap: 1em;
+}
+
+@media screen and (min-width: 768px) {
+	.content {
+		row-gap: 2.369em;
+	}
+}
+
+.site-header,
+.site-main,
+.content header,
+.content main,
+.content section {
+	grid-column: header/end;
+}
+
+@media screen and (min-width: 768px) {
+	.content header {
+		grid-column: header/end;
+		grid-row: 1;
+	}
+	
+	.content section {
+		grid-column: header/sidebar;
+		grid-row: 2;
+	}
+	
+	.content main {
+		grid-column: sidebar/end;
+		grid-row: 2;
+	}
+}
+
 .site-header {
+	grid-row: header;
+}
+
+.site-header h1 {
 	background: linear-gradient(180deg, var(--color-accent), var(--color-theme) 66%);
 	color: var(--color-text-over);
 	display: flex;
 		align-items: end;
 	font-size: 1em;
-	width: min-content;
-}
-
-.site-header a {
-	background: none;
-	display: flex;
-		align-items: end;
+	grid-column: header;
 	height: 100%;
+	padding: 1rem 1.333rem 1rem 1.333rem;
 	width: 100%;
 }
-
-.site-header:has(a:hover) {
+	
+.site-header h1:has(a:hover) {
 	background: linear-gradient(180deg, var(--color-accent), var(--color-accent));
 }
 
-.site-header h1 {
-	padding: 1rem 1.333rem 1rem 1.333rem;
-	white-space: nowrap; /* I love Firefox */
-}
-
-.single section {
-	display: flex;
-		align-content: flex-start;
-		flex-flow: row wrap;
-		gap: 1em .75em;
-}
-
-.single section aside {
-	flex-basis: 20ch;
+.site-main {
+	grid-row: main;
 }
 
 .site-footer {
 	background: linear-gradient(180deg, var(--color-theme), var(--color-accent) 66%);
 	color: var(--color-text-over);
 	font-size: 0.75em;
-	margin: 0 0 0 auto;
+	grid-column: footer;
+	grid-row: footer;
+	margin: 0 0 0 0;
 	padding: 1rem 1.333rem 1rem 1.333rem;
 	text-align: right;
-	width: max-content;
 }
 
 .site-footer a {
@@ -444,44 +459,6 @@ ul {
 
 .site-footer nav {
 	margin: 1.333em 0 1.333em 0;
-}
-
-
-@media screen and (min-width: 768px) {
-	.single header {
-		grid-column: header/end;
-		grid-row: 1;
-	}
-	
-	.single section {
-		grid-column: header/sidebar;
-		grid-row: 2;
-	}
-	
-	.single main {
-		grid-column: sidebar/end;
-		grid-row: 2;
-	}
-}
-
-@media screen and (min-width: 1024px) {
-	.site-header {
-		grid-column: header;
-		grid-row: header;
-		width: 100%;
-	}
-	
-	.site-main {
-		grid-column: header/end;
-		grid-row: content;
-	}
-	
-	.site-footer {
-		grid-column: footer;
-		grid-row: footer;
-		margin: 0 0 0 0;
-		width: 100%;
-	}
 }
 
 /********
@@ -513,6 +490,7 @@ ul {
 		padding: 0 0 0.333em 0;
 		display: flex;
 			align-items: center;
+			column-gap: 1em;
 			justify-content: space-between;
 		width: 100%;
 	}
@@ -539,8 +517,12 @@ ul {
 }
 
 @media screen and (min-width: 768px) {
+	.home header {
+		grid-column: header;
+	}
+	
 	.home main {
-		grid-column: sidebar/end;
+		grid-row: 1;
 	}
 }
 
@@ -571,24 +553,6 @@ ul {
 ************
 ***********/
 
-@media screen and (min-width: 768px) {
-	.archive header {
-		grid-column: 1;
-	}
-	
-	.archive section {
-		grid-column: 1;
-	}
-	
-	.archive main {
-		grid-column: 2/-1;
-	}
-}
-
-.archive .search {
-	text-align: right;
-}
-
 /***********
 ************
 * Articles *
@@ -613,8 +577,12 @@ ul {
 	}
 }
 
-.single header h1 {
+der h1 {
 	font-size: 2.369em;
+}
+
+.single section aside {
+	flex-basis: 20ch;
 }
 
 .single a {
@@ -641,7 +609,7 @@ ul {
 	text-align: right;
 }
 
-.single_content .footnotes {
+.single main .footnotes {
 	font-size: 1em;
 	margin: 1em 0 0 0;
 }
