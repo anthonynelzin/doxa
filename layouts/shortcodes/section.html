@@ -5,9 +5,9 @@
 
 <div class="content home list">
 	<header>
-		{{ with .Site.GetPage "section" $section }}
-		<h1><a href="{{ .Permalink }}">{{ .Params.Icon }} {{ .Title }}</a></h1>
-		{{ with .Description }}<p class="description">{{ . }}</p>{{ end }}
+		{{ with .Site.GetPage $section }}
+			<h1><a href="{{ .Permalink }}">{{ .Params.Icon }} {{ .Title }}</a></h1>
+			{{ with .Description }}<p class="description">{{ . }}</p>{{ end }}
 		{{ end }}
 	</header>
 

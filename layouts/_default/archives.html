@@ -38,14 +38,14 @@
 	{{ $pages := where (where .Site.RegularPages "Type" "!=" "page") "Params.Rssonly" "!=" true }}
 
 		<header>
-			<h1>{{ .Params.Icon }} {{ .Title }}</h1>
+			<h1>{{ with .Params.Icon }}{{ . }}&nbsp;{{ end }}{{ .Title }}</h1>
 			<p class="description"><span class="counter">{{ len $pages }}</span> {{ T "results" }}</p>
 		</header>
 		
 		<main class="items">
 			{{ range $pages }}
 				<article class="filtr-item title" data-category="{{ .Section }}, {{ .Date.Format "2006" }}, {{ if .Params.Themes }}{{ delimit .Params.Themes ", " }}{{ end }}, {{ if .Params.Pays }}{{ delimit .Params.Pays ", " }}{{ end }}, {{ if .Params.Genres }}{{ delimit .Params.Genres ", " }}{{ end }}, {{ if .Params.Lectures }}{{ delimit .Params.Lectures ", " }}{{ end }}">
-					<h2>{{ .Parent.Params.Icon }}<a href="{{ .Permalink }}">{{ partial "title.html" . }}</a></h2>
+					<h2>{{ with .Parent.Params.Icon }}{{ . }}{{ end }}<a href="{{ .Permalink }}">{{ partial "title.html" . }}</a></h2>
 					<time datetime='{{ .Date.Format "2006-01-02T15:04:05" }}'>{{ .Date | time.Format ":date_long" }}</time>
 				</article>	
 			{{ end }}
@@ -55,12 +55,9 @@
 			<aside class="filter">
 				<h2>{{ T "by_category" }}</h2>
 	
-				<button data-multifilter="biblio">📘&nbsp;Biblio</button>
-				<button data-multifilter="bistro">☕️&nbsp;Bistro</button>
-				<button data-multifilter="blog">👾&nbsp;Blog</button>
-				<button data-multifilter="memo">📝&nbsp;Mémo</button>
-				<button data-multifilter="photo">📷&nbsp;Photo</button>
-				<button data-multifilter="stylo">🖋&nbsp;Stylo</button>
+				{{ range .Site.Sections.ByTitle }}
+					<button data-multifilter="{{ .Section }}">{{ with .Params.Icon }}{{ . }}&nbsp;{{ end }}{{ .Title }}</button>
+				{{ end }}
 			</aside>
 
 			<aside class="filter">
@@ -70,22 +67,28 @@
 					<button data-multifilter="{{ .Key }}">{{ .Key }}</button>
 				{{ end }}
 			</aside>
-
-			<aside class="filter">
-				<h2>{{ T "by_theme" }}</h2>
-
-				{{ range (index .Site.Taxonomies "themes") }}
-					<button data-multifilter="{{ .Page.Title }}">{{ .Page.Title }}</button>
+			
+			{{ if .Params.Filters }}
+				{{ range .Params.Filters }}
+					<aside class="filter">
+						{{ $filter := . }}
+						{{ $title := printf "by_%s" $filter }}
+						<h2>{{ T $title }}</h2>
+						
+						{{ range (index $.Site.Taxonomies $filter) }}
+							<button data-multifilter="{{ .Page.Title }}">{{ .Page.Title }}</button>
+						{{ end }}
+					</aside>
 				{{ end }}
-			</aside>
-
-			<aside class="filter">
-				<h2>{{ T "by_country" }}</h2>
-
-				{{ range (index .Site.Taxonomies "pays") }}
-					<button data-multifilter="{{ .Page.Title }}">{{ .Page.Title }}</button>
-				{{ end }}
-			</aside>
+			{{ else }}
+				<aside class="filter">
+					<h2>{{ T "by_themes" }}</h2>
+					
+					{{ range (index .Site.Taxonomies "themes") }}
+						<button data-multifilter="{{ .Page.Title }}">{{ .Page.Title }}</button>
+					{{ end }}
+				</aside>
+			{{ end }}
 		</section>
 	</div>
 {{ end }}

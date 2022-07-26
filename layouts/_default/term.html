@@ -38,8 +38,8 @@
 	{{ $pages := where (where .RegularPages "Type" "!=" "page") "Params.Rssonly" "!=" true }}
 
 		<header>
-			<h1>{{ .Params.Icon }} {{ .Title }}</h1>
-			<p class="description"><span class="counter">{{ len $pages }}</span> {{ T "results" }}</p>
+			<h1>{{ with .Params.Icon }}{{ . }}&nbsp;{{ end }}{{ .Title }}</h1>
+			<p class="description"><span class="counter">{{ len $pages }}</span> {{ T "results" $pages }}</p>
 		</header>
 		
 		<main class="items">
@@ -54,13 +54,9 @@
 		<section class="filters">
 			<aside class="filter">
 				<h2>{{ T "by_category" }}</h2>
-			
-				<button data-multifilter="biblio">📘&nbsp;Biblio</button>
-				<button data-multifilter="bistro">☕️&nbsp;Bistro</button>
-				<button data-multifilter="blog">👾&nbsp;Blog</button>
-				<button data-multifilter="memo">📝&nbsp;Mémo</button>
-				<button data-multifilter="photo">📷&nbsp;Photo</button>
-				<button data-multifilter="stylo">🖋&nbsp;Stylo</button>
+				{{ range .Site.Sections.ByTitle }}
+					<button data-multifilter="{{ .Section }}">{{ with .Params.Icon }}{{ . }}&nbsp;{{ end }}{{ .Title }}</button>
+				{{ end }}
 			</aside>
 			
 			<aside class="filter">

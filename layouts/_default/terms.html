@@ -2,8 +2,8 @@
 	<div class="content archive list">
 	{{ $pages := where (where .RegularPages "Type" "!=" "page") "Params.Rssonly" "!=" true }}
 		<header>
-			<h1>{{ .Params.Icon }} {{ .Title }}</h1>
-			<p class="description"><span class="counter">{{ len .Pages }}</span> {{ T "results" }}</p>
+			<h1>{{ with .Params.Icon }}{{ . }}&nbsp;{{ end }}{{ .Title }}</h1>
+			<p class="description"><span class="counter">{{ len .Pages }}</span> {{ T "results" $pages }}</p>
 		</header>
 		
 		<main class="items">

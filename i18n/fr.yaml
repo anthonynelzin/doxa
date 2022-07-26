@@ -1,17 +1,9 @@
-skip_link:
-    other: "Aller directement au contenu principal"
-
-by:
-    other: "par"
-colophon:
-    other: "Ours"
 contact:
     other: "Vous avez aimé cet article ?"
 filter:
     other: "Filtrer…"
-reset:
-    other: "Réinitialiser"
 results:
+    one: "résultat"
     other: "résultats"
 sections:
     other: "Rubriques"
@@ -51,21 +43,30 @@ shelving:
 themes:
     other: "Thèmes"
     
-by_author:
+by_auteurs:
     other: "Par auteur"
+by_cotes:
+    other: "Par cote"
+by_couleurs:
+    other: "Par couleur"
+by_editeurs:
+    other: "Par éditeur"
+by_genres:
+    other: "Par genre"
+by_lectures:
+    other: "Par lecture"
+by_marques:
+    other: "Par marque"
+by_pays:
+    other: "Par pays"
+by_series:
+    other: "Par série"
+by_themes:
+    other: "Par thème"
+by_villes:
+    other: "Par ville"
+    
 by_category:
     other: "Par rubrique"
-by_country:
-    other: "Par pays"
-by_genre:
-    other: "Par genre"
-by_location:
-    other: "Par localisation"
-by_publisher:
-    other: "Par éditeur"
-by_reading:
-    other: "Par lecture"
-by_theme:
-    other: "Par thème"
 by_year:
     other: "Par année"

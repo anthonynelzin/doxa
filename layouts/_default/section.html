@@ -38,8 +38,8 @@
 	{{ $pages := where (where .RegularPages "Type" "!=" "page") "Params.Rssonly" "!=" true }}
 
 		<header>
-			<h1>{{ .Params.Icon }} {{ .Title }}</h1>
-			<p class="description"><span class="counter">{{ len $pages }}</span> {{ T "results" }}</p>
+			<h1>{{ with .Params.Icon }}{{ . }}&nbsp;{{ end }}{{ .Title }}</h1>
+			<p class="description"><span class="counter">{{ len $pages }}</span> {{ T "results" $pages }}</p>
 		</header>
 		
 		<main class="items">
@@ -51,31 +51,38 @@
 			{{ end }}
 		</main>
 		
-		<!-- @TODO : select filters from _index.md -->
 		<section class="filters">
+			{{ if not .Params.removeDate }}
 			<aside class="filter">
 				<h2>{{ T "by_year" }}</h2>
-
+			
 				{{ range $pages.GroupByDate "2006" }}
 					<button data-multifilter="{{ .Key }}">{{ .Key }}</button>
 				{{ end }}
 			</aside>
-
-			<aside class="filter">
-				<h2>{{ T "by_theme" }}</h2>
-
-				{{ range (index .Site.Taxonomies "themes") }}
-					<button data-multifilter="{{ .Page.Title }}">{{ .Page.Title }}</button>
+			{{ end }}
+			
+			{{ if .Params.Filters }}
+				{{ range .Params.Filters }}
+					<aside class="filter">
+						{{ $filter := . }}
+						{{ $title := printf "by_%s" $filter }}
+						<h2>{{ T $title }}</h2>
+						
+						{{ range (index $.Site.Taxonomies $filter) }}
+							<button data-multifilter="{{ .Page.Title }}">{{ .Page.Title }}</button>
+						{{ end }}
+					</aside>
 				{{ end }}
-			</aside>
-
-			<aside class="filter">
-				<h2>{{ T "by_country" }}</h2>
-
-				{{ range (index .Site.Taxonomies "pays") }}
-					<button data-multifilter="{{ .Page.Title }}">{{ .Page.Title }}</button>
-				{{ end }}
-			</aside>
+			{{ else }}
+				<aside class="filter">
+					<h2>{{ T "by_themes" }}</h2>
+					
+					{{ range (index .Site.Taxonomies "themes") }}
+						<button data-multifilter="{{ .Page.Title }}">{{ .Page.Title }}</button>
+					{{ end }}
+				</aside>
+			{{ end }}
 		</section>
 	</div>
 {{ end }}
