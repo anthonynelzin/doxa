@@ -405,24 +405,30 @@ ul {
 }
 
 .site-header {
-	height: 17.713rem;
-	width: 17.713rem;
-	margin: 0 0 7.418em 0;
-}
-
-.site-header h1 {
 	background: linear-gradient(180deg, var(--color-accent), var(--color-theme) 66%);
 	color: var(--color-text-over);
 	display: flex;
 		align-items: end;
 	font-size: 1em;
+	height: 17.713rem;
+	width: 17.713rem;
+	margin: 0 0 7.418em 0;
+}
+
+.site-header a {
+	background: none;
+	display: flex;
+		align-items: end;
 	height: 100%;
-	padding: 0 0 1em 1.333em;
 	width: 100%;
 }
+
+.site-header h1 {
+	padding: 0 0 1em 1.333em;
+}
 	
-.site-header h1:has(a:hover) {
-	background: linear-gradient(180deg, var(--color-accent), var(--color-accent));
+.site-header:has(a:hover) {
+	background: var(--color-accent);
 }
 
 .site-footer {

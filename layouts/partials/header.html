@@ -1,1 +1,1 @@
-<h1>{{ if not .IsHome }}<a href="{{ .Site.BaseURL }}">{{ end }}{{ .Site.Title }}{{ if not .IsHome }}</a>{{ end }}</h1>
+{{ if not .IsHome }}<a href="{{ .Site.BaseURL }}">{{ end }}<h1>{{ .Site.Title }}</h1>{{ if not .IsHome }}</a>{{ end }}
