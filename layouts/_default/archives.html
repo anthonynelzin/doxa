@@ -42,6 +42,15 @@
 			<p class="description"><span class="counter">{{ len $pages }}</span> {{ T "results" }}</p>
 		</header>
 		
+		<main class="items">
+			{{ range $pages }}
+				<article class="filtr-item title" data-category="{{ .Section }}, {{ .Date.Format "2006" }}, {{ if .Params.Themes }}{{ delimit .Params.Themes ", " }}{{ end }}, {{ if .Params.Pays }}{{ delimit .Params.Pays ", " }}{{ end }}, {{ if .Params.Genres }}{{ delimit .Params.Genres ", " }}{{ end }}, {{ if .Params.Lectures }}{{ delimit .Params.Lectures ", " }}{{ end }}">
+					<h2>{{ .Parent.Params.Icon }}<a href="{{ .Permalink }}">{{ partial "title.html" . }}</a></h2>
+					<time datetime='{{ .Date.Format "2006-01-02T15:04:05" }}'>{{ .Date | time.Format ":date_long" }}</time>
+				</article>	
+			{{ end }}
+		</main>
+		
 		<section class="filters">
 			<aside class="filter">
 				<h2>{{ T "by_category" }}</h2>
@@ -78,14 +87,5 @@
 				{{ end }}
 			</aside>
 		</section>
-		
-		<main class="items">
-			{{ range $pages }}
-				<article class="filtr-item title" data-category="{{ .Section }}, {{ .Date.Format "2006" }}, {{ if .Params.Themes }}{{ delimit .Params.Themes ", " }}{{ end }}, {{ if .Params.Pays }}{{ delimit .Params.Pays ", " }}{{ end }}, {{ if .Params.Genres }}{{ delimit .Params.Genres ", " }}{{ end }}, {{ if .Params.Lectures }}{{ delimit .Params.Lectures ", " }}{{ end }}">
-					<h2>{{ .Parent.Params.Icon }}<a href="{{ .Permalink }}">{{ partial "title.html" . }}</a></h2>
-					<time datetime='{{ .Date.Format "2006-01-02T15:04:05" }}'>{{ .Date | time.Format ":date_long" }}</time>
-				</article>	
-			{{ end }}
-		</main>
 	</div>
 {{ end }}
