@@ -19,7 +19,7 @@ offline_image:
 offline_caption:
     other: "La vallée de Yosemite. Image <a href='https://unsplash.com/photos/8BFWBUkSqQo'>Rodrigo Soares</a> (Unsplash)."
 swatch:
-    other: "Couverture"
+    other: "Nuanciers"
 
 published:
     other: "Publié le"
@@ -43,8 +43,12 @@ shelving:
 themes:
     other: "Thèmes"
     
+by:
+    other: "Par"
 by_auteurs:
     other: "Par auteur"
+by_category:
+    other: "Par rubrique"
 by_cotes:
     other: "Par cote"
 by_couleurs:
@@ -65,8 +69,5 @@ by_themes:
     other: "Par thème"
 by_villes:
     other: "Par ville"
-    
-by_category:
-    other: "Par rubrique"
 by_year:
     other: "Par année"
