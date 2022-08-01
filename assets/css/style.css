@@ -708,12 +708,19 @@ ul {
 	padding: 1em;
 }
 
+.single main sub,
+.single main sup {
+	font-size: 0.75em;
+	line-height: 0;
+	position: relative;
+}
+
 .single main sub {
-	font-variant-position: sub;
+	bottom: -0.238em;
 }
 
 .single main sup {
-	font-variant-position: super;
+	top: -0.563em;
 }
 
 .single main table {
