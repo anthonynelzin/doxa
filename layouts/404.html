@@ -1,0 +1,40 @@
+{{ define "main" }}
+<article class="content single">
+	<header>
+		{{ $hero := resources.Get "img/404.jpg" }}
+		{{ $default := $hero.Resize "800x" }}
+		{{ $small := $hero.Resize "600x webp" }}
+		{{ $medium := $hero.Resize "800x webp" }}
+		{{ $large := $hero.Resize "1200x webp" }}
+		{{ $xlarge := $hero.Resize "1600x webp" }}
+		
+		<figure class="hero" role="figure" aria-hidden="true">
+			<picture>
+				<source
+					media="(max-width: 875px)"
+					srcset="{{ $small.RelPermalink }} 1x, {{ $large.RelPermalink }} 2x"
+					type="image/webp" />
+				<source
+					media="(min-width: 875px)"
+					srcset="{{ $medium.RelPermalink }} 1x, {{ $xlarge.RelPermalink }} 2x"
+					type="image/webp" />
+				<img
+					alt='{{ T "hero" }} {{ .Title }}'
+					decoding="async"
+					loading="lazy"
+					src="{{ $default.RelPermalink }}"
+					width="{{ $default.Width }}" />
+			</picture>
+			<figcaption>{{ T "image" }} <a href="https://www.flickr.com/photos/jonastana/27758932562/">Jonas Tana</a> (<a href="https://creativecommons.org/licenses/by-nc-nd/2.0/">CC BY-NC-ND 2.0</a>).</figcaption>
+		</figure>
+	
+		<h1>
+			{{ T "404_title" }}
+		</h1>
+	</header>
+	
+	<main>
+		<p>{{ T "404_content" | safeHTML }}</p>
+	</main>
+</article>
+{{ end }}

@@ -14,10 +14,6 @@ hero:
     other: "Illustration principale de l’article"
 image:
     other: "Image"
-offline_image:
-    other: "Des montagnes au crépuscule"
-offline_caption:
-    other: "La vallée de Yosemite. Image <a href='https://unsplash.com/photos/8BFWBUkSqQo'>Rodrigo Soares</a> (Unsplash)."
 swatch:
     other: "Nuanciers"
 
@@ -25,6 +21,15 @@ published:
     other: "Publié le"
 updated:
     other: "Mis à jour le"
+    
+404_title: 
+    other: "Erreur 404"
+404_content:
+    other: "La page que vous demandez n’existe pas (ou plus). Vous pouvez <a href='/'>revenir à la page d’accueil</a>, lire <a href='/commencez-ici/'>quelques morceaux choisis</a>, ou bien <a href='/continuez-ailleurs/'>continuer ailleurs</a>."
+offline_image:
+    other: "Des montagnes au crépuscule"
+offline_caption:
+    other: "La vallée de Yosemite. Image <a href='https://unsplash.com/photos/8BFWBUkSqQo'>Rodrigo Soares</a> (Unsplash)."
 
 brands:
     other: "Marques"
